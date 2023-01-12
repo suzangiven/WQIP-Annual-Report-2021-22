@@ -1,0 +1,217 @@
+Jurisdiction,FacilityID,FlowCondition,FloatDischargeCFS,VolumeDischargeCFS,SampleDry,FlowConnectivity,Date
+Aliso Viejo,I01-11216-1 (I02P13),Pooled or Ponded,NA,NA,,Undetermined,2022-06-28
+Aliso Viejo,I01-11216-2 (I02P12),Pooled or Ponded,NA,NA,,,2022-06-28
+Aliso Viejo,I01-11216-3,Pooled or Ponded,NA,NA,,Undetermined,2022-06-28
+Aliso Viejo,I01-11216-4 (I02P14),Pooled or Ponded,NA,NA,,Undetermined,2022-06-28
+Aliso Viejo,I01-11217-1,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-28
+Aliso Viejo,I01-11503-3,Pooled or Ponded,NA,NA,,Partial - Significant Distance,2022-06-28
+Aliso Viejo,I01-11503-5,Pooled or Ponded,NA,NA,,Direct Connection,2022-06-28
+Aliso Viejo,J01-10017-1 (J01TBN4),Flowing,0,0.004,,,2022-06-28
+Aliso Viejo,J01-10017-1 (J01TBN4),Flowing,0.01,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-28
+Aliso Viejo,J01-9007-1 (J02P05),Flowing,0.06,0.025,Yes,,2022-06-23
+Aliso Viejo,J01-9007-1 (J02P05),Flowing,0.054,NA,Yes,Undetermined,2022-06-23
+Aliso Viejo,J01-9008-1 (J01P30),Flowing,NA,0.007,,,2022-06-28
+Aliso Viejo,J01-9008-1 (J01P30),Flowing,0.070588,NA,,Direct Connection,2022-06-28
+Aliso Viejo,J01-9008-1 (J01P30),Flowing,0.008506,NA,,Direct Connection,2022-07-01
+Aliso Viejo,J01-9008-1 (J01P30),Flowing,0.171,0.013,,,2022-07-01
+Aliso Viejo,J01-9082-2,Flowing,0.1,NA,Yes,Direct Connection,2022-06-23
+Aliso Viejo,J01-9082-3,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-23
+Aliso Viejo,J01-9082-4,Flowing,0.0144,NA,,Direct Connection,2022-06-23
+Aliso Viejo,J01-9131-1 (J01P28),Flowing,0.03,NA,Yes,Direct Connection,2022-06-23
+Aliso Viejo,J01-9131-1 (J01P28),Dry,NA,NA,Yes,None - Flow Infiltrates or Outfall is Dry,2022-07-01
+Aliso Viejo,J01-9992-1 (J01P27),Flowing,0.039616,NA,Yes,Direct Connection,2022-06-23
+Aliso Viejo,J01-9992-1 (J01P27),Flowing,0,0.037,Yes,,2022-07-01
+Aliso Viejo,J01-9992-1 (J01P27),Flowing,0.05125,NA,Yes,Direct Connection,2022-07-01
+Aliso Viejo,J06-10011-1 (J06P01),Flowing,0.509735,NA,Yes,Direct Connection,2022-06-23
+Aliso Viejo,J06-9079-1 (J06P03),Flowing,0.096183,NA,Yes,Direct Connection,2022-06-23
+Dana Point,K01-12126-1 (K01S01),Flowing,0.46478,NA,Yes,Direct Connection,2022-06-22
+Dana Point,K01-12159-2,Flowing,NA,0.088,Yes,,2022-06-22
+Dana Point,K01-12159-2,Flowing,0.114324,NA,Yes,Direct Connection,2022-06-22
+Dana Point,K01-12159-3,Flowing,NA,0.007,,,2022-06-22
+Dana Point,K01-12159-3,Flowing,0.014143,NA,,Direct Connection,2022-06-22
+Dana Point,L01-726-5,Flowing,0.0015,NA,Yes,Direct Connection,2022-06-22
+Dana Point,L01-728-5 (L01-DP),Flowing,NA,0.008,Yes,,2022-06-22
+Dana Point,L01-728-5 (L01-DP),Flowing,0.018,NA,Yes,None - Flow Infiltrates or Outfall is Dry,2022-06-22
+Laguna Beach,I00-11437-1,Pooled or Ponded,NA,NA,Yes,None - Flow Infiltrates or Outfall is Dry,2022-06-21
+Laguna Beach,I00-11468-1,Flowing,0.0192,NA,Yes,Direct Connection,2022-06-21
+Laguna Beach,I01-11010-1,Flowing,0.007407,NA,Yes,Direct Connection,2022-06-21
+Laguna Beach,I01-11023-1,Pooled or Ponded,NA,NA,Yes,Direct Connection,2022-06-21
+Laguna Beach,LC06-11019-1,Flowing,0.12,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-21
+Laguna Beach,LC06-11509-2,Flowing,0.007759,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-21
+Laguna Hills,J05-9800-2,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-07-01
+Laguna Niguel,J01-10041-2 (J03P13),Pooled or Ponded,NA,NA,,Partial - Significant Distance,2022-06-28
+Laguna Niguel,J01-9144-1 (J01P23),Flowing,0,0.001,,,2022-06-28
+Laguna Niguel,J01-9144-1 (J01P23),Flowing,5.7e-4,NA,,Direct Connection,2022-06-28
+Laguna Niguel,J01-9224-1 (J01P24),Flowing,0.011,NA,Yes,,2022-06-15
+Laguna Niguel,J01-9224-1 (J01P24),Flowing,0.010833,NA,Yes,Direct Connection,2022-06-15
+Laguna Niguel,J01-9224-2 (J01P25),Flowing,NA,NA,Yes,,2022-06-15
+Laguna Niguel,J01-9224-2 (J01P25),Flowing,0.0735,NA,Yes,Direct Connection,2022-06-15
+Laguna Niguel,J03-9215-1,Pooled or Ponded,NA,NA,,Direct Connection,2022-06-23
+Laguna Niguel,J03-9215-3,Flowing,0.010218,NA,,Direct Connection,2022-06-23
+Laguna Niguel,J03-9221-1 (J03P02),Flowing,NA,0.049,Yes,,2022-06-15
+Laguna Niguel,J03-9221-1 (J03P02),Flowing,0.032,NA,Yes,Undetermined,2022-06-15
+Laguna Niguel,J03-9368-1 (J03TBN1),Flowing,0.003822,NA,,Direct Connection,2022-06-23
+Laguna Niguel,J03-9368-2 (J03TBN2),Flowing,NA,0.004,,,2022-06-23
+Laguna Niguel,J03-9368-2 (J03TBN2),Flowing,0.015319,NA,,Direct Connection,2022-06-23
+Laguna Niguel,K01-12177-1 (K01P07),Flowing,0.221,0.039,Yes,,2022-06-15
+Laguna Niguel,K01-12177-1 (K01P07),Flowing,0.198,NA,Yes,Undetermined,2022-06-15
+Laguna Niguel,L03-418-2,Flowing,NA,NA,,Partial - Significant Distance,2022-06-23
+Laguna Niguel,L03-418-3,Pooled or Ponded,NA,NA,,Partial - Significant Distance,2022-06-23
+Laguna Niguel,L03-418-8,Flowing,0.1,NA,Yes,Direct Connection,2022-06-15
+Laguna Niguel,L03-708-1,Flowing,NA,0.007,,,2022-06-15
+Laguna Niguel,L03-708-1,Flowing,0.066,0.049,,,2022-06-15
+Laguna Niguel,L03-708-1,Flowing,0.0324,NA,,Direct Connection,2022-06-15
+Laguna Niguel,L03-708-11 (L03P05),Flowing,0.19,0.022,,,2022-06-23
+Laguna Niguel,L03-708-11 (L03P05),Flowing,0.171701,NA,,Direct Connection,2022-06-23
+Laguna Niguel,L03-708-13,Flowing,0.09,NA,,Direct Connection,2022-06-23
+Laguna Niguel,L03-708-5,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-23
+Laguna Niguel,L03-708-9,Flowing,0.00525,NA,,Direct Connection,2022-06-23
+Laguna Woods,I01-11343-1,Pooled or Ponded,NA,NA,Yes,None - Flow Infiltrates or Outfall is Dry,2022-06-14
+Laguna Woods,I01-11343-2 (I02P18),Flowing,0.003794,NA,Yes,Undetermined,2022-06-14
+Laguna Woods,J01-9273-1,Pooled or Ponded,NA,NA,Yes,None - Flow Infiltrates or Outfall is Dry,2022-06-14
+Laguna Woods,J01-9273-1,Pooled or Ponded,NA,NA,Yes,,2022-07-01
+Laguna Woods,J01-9273-1,Pooled or Ponded,NA,NA,Yes,None - Flow Infiltrates or Outfall is Dry,2022-07-01
+Lake Forest,J01-10004-1 (J01P01),Flowing,0.125,NA,Yes,,2022-06-21
+Lake Forest,J01-10004-1 (J01P01),Flowing,0.133333,NA,Yes,Direct Connection,2022-06-21
+Lake Forest,J01-10004-1 (J01P01),Flowing,0.12,0.026,Yes,,2022-06-30
+Lake Forest,J01-10004-1 (J01P01),Flowing,0.1449,NA,Yes,Direct Connection,2022-06-30
+Lake Forest,J01-10004-2,Pooled or Ponded,NA,NA,,Partial - Significant Distance,2022-06-21
+Lake Forest,J01-10006-1,Pooled or Ponded,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-21
+Lake Forest,J01-9031-1,Pooled or Ponded,NA,NA,Yes,Partial - Significant Distance,2022-06-21
+Lake Forest,J01-9040-1,Flowing,0.48125,NA,,Direct Connection,2022-04-07
+Lake Forest,J01-9040-1,Pooled or Ponded,NA,NA,,Direct Connection,2022-04-14
+Lake Forest,J01-9040-1,Pooled or Ponded,NA,NA,,Direct Connection,2022-04-21
+Lake Forest,J01-9040-1,Flowing,0.867895,NA,,Direct Connection,2022-05-12
+Lake Forest,J01-9040-1,Pooled or Ponded,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-05-19
+Lake Forest,J01-9046-1,Pooled or Ponded,NA,NA,,Direct Connection,2022-06-21
+Lake Forest,J01-9046-1,Dry,NA,NA,,,2022-06-30
+Lake Forest,J01-9046-1,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-30
+Lake Forest,J01-9046-2,Pooled or Ponded,NA,NA,,Direct Connection,2022-06-21
+Lake Forest,J01-9046-2,Flowing,0.004,0,,,2022-06-30
+Lake Forest,J01-9046-2,Flowing,0.004107,NA,,Direct Connection,2022-06-30
+Lake Forest,J01-9259-3,Pooled or Ponded,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-21
+Lake Forest,J01-9264-1 (J01P06),Pooled or Ponded,NA,NA,,Partial - Significant Distance,2022-06-30
+Lake Forest,J01-9275-2,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-21
+Lake Forest,J01-9349-1,Pooled or Ponded,NA,NA,Yes,Direct Connection,2022-06-21
+Lake Forest,J01-9349-1,Dry,NA,NA,Yes,,2022-06-30
+Lake Forest,J01-9349-1,Dry,NA,NA,Yes,None - Flow Infiltrates or Outfall is Dry,2022-06-30
+Lake Forest,J01-9377-1,Pooled or Ponded,NA,NA,Yes,Direct Connection,2022-06-21
+Lake Forest,J01-9377-1,Dry,NA,NA,Yes,,2022-06-30
+Lake Forest,J01-9377-1,Dry,NA,NA,Yes,None - Flow Infiltrates or Outfall is Dry,2022-06-30
+Lake Forest,J01-9377-2 (J01TBN8),Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-21
+Lake Forest,J01-9782-1 (J01TBN3),Pooled or Ponded,NA,NA,,Direct Connection,2022-06-21
+Mission Viejo,J01-9066-1 (J01P04),Flowing,0.004,0.001,,,2022-06-21
+Mission Viejo,J01-9066-1 (J01P04),Flowing,0.003557,NA,,Direct Connection,2022-06-21
+Mission Viejo,J01-9066-1 (J01P04),Flowing,0,0,,,2022-07-01
+Mission Viejo,J01-9066-1 (J01P04),Flowing,1.95e-4,NA,,Direct Connection,2022-07-01
+Mission Viejo,J01-9066-2 (J01P03),Flowing,NA,NA,,,2022-06-21
+Mission Viejo,J01-9066-2 (J01P03),Flowing,0.365414,NA,,Direct Connection,2022-06-21
+Mission Viejo,J01-9066-2 (J01P03),Flowing,NA,NA,,Direct Connection,2022-07-01
+Mission Viejo,J01-9066-2 (J01P03),Flowing,NA,0.002,,,2022-07-01
+Mission Viejo,J01-9066-2 (J01P03),Flowing,0.017671,NA,,Direct Connection,2022-07-01
+Mission Viejo,J07-9022-1,Flowing,NA,NA,,Direct Connection,2022-06-21
+Mission Viejo,J07-9022-6,Flowing,0,NA,,Partial - Significant Distance,2022-06-21
+Mission Viejo,J07-9109-1,Pooled or Ponded,NA,NA,,,2022-06-21
+Mission Viejo,J07-9109-1,Pooled or Ponded,NA,NA,,Partial - Significant Distance,2022-06-21
+Mission Viejo,J07-9109-2,Pooled or Ponded,NA,NA,,,2022-06-21
+Mission Viejo,J07-9109-2,Pooled or Ponded,NA,NA,,Partial - Significant Distance,2022-06-21
+Mission Viejo,J07-9109-4 (J07P02),Flowing,0.038,0.007,,,2022-06-21
+Mission Viejo,J07-9109-4 (J07P02),Flowing,0.033659,NA,,Partial - Significant Distance,2022-06-21
+Mission Viejo,J07-9109-4 (J07P02),Flowing,0.024,NA,,,2022-06-30
+Mission Viejo,J07-9109-4 (J07P02),Flowing,0.024,NA,,Partial - Significant Distance,2022-06-30
+Mission Viejo,J07-9110-1,Flowing,NA,0.001,,,2022-06-21
+Mission Viejo,J07-9110-1,Flowing,0.004711,NA,,Partial - Significant Distance,2022-06-21
+Mission Viejo,J07-9110-2,Flowing,0.002,0.002,,,2022-06-21
+Mission Viejo,J07-9110-2,Flowing,0.002264,NA,,Direct Connection,2022-06-21
+Mission Viejo,J07-9110-2,Flowing,5.86e-4,NA,,Direct Connection,2022-06-30
+Mission Viejo,J07-9110-2,Flowing,0.001,0,,,2022-06-30
+Mission Viejo,J07-9110-3,Pooled or Ponded,NA,NA,,,2022-06-21
+Mission Viejo,J07-9110-3,Pooled or Ponded,NA,NA,,Partial - Significant Distance,2022-06-21
+Mission Viejo,J07-9110-3,Dry,NA,NA,,,2022-06-30
+Mission Viejo,J07-9110-3,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-30
+Mission Viejo,L02-366-1 (MVL02P14),Flowing,0.025,0.016,,,2022-06-17
+Mission Viejo,L02-366-1 (MVL02P14),Flowing,0.0245,NA,,Undetermined,2022-06-17
+Mission Viejo,L03-074-1 (L03B01),Flowing,NA,NA,,Direct Connection,2022-06-22
+Mission Viejo,L03-074-2,Flowing,NA,NA,,,2022-06-22
+Mission Viejo,L03-141-1,Pooled or Ponded,NA,NA,,Direct Connection,2022-06-22
+Mission Viejo,L03-141-2,Pooled or Ponded,NA,NA,,Direct Connection,2022-06-22
+Mission Viejo,L03-141-3,Pooled or Ponded,NA,NA,,Direct Connection,2022-06-22
+Mission Viejo,L03-172-2,Flowing,NA,NA,,,2022-06-22
+Mission Viejo,L03-172-3,Pooled or Ponded,NA,NA,,,2022-06-22
+Mission Viejo,L03-214-2 (L03P18),Flowing,NA,0.153,Yes,,2022-06-14
+Mission Viejo,L03-214-2 (L03P18),Flowing,0.418,NA,Yes,Direct Connection,2022-06-14
+Mission Viejo,L03-316-2,Flowing,NA,NA,,Direct Connection,2022-06-22
+Mission Viejo,L03-316-3 (L03P12),Flowing,NA,0.071,Yes,,2022-06-14
+Mission Viejo,L03-316-3 (L03P12),Flowing,0.126,NA,Yes,Direct Connection,2022-06-14
+Mission Viejo,L03-316-4,Flowing,NA,NA,,Direct Connection,2022-06-22
+Mission Viejo,L03-662-3 (L03P16),Flowing,NA,NA,Yes,,2022-06-14
+Mission Viejo,L03-662-3 (L03P16),Flowing,0.066,NA,Yes,Partial - Significant Distance,2022-06-14
+Mission Viejo,L04-136-1u (L04P07),Flowing,0.126,NA,,Partial - Significant Distance,2022-06-29
+Mission Viejo,L04-266-5,Flowing,0.219,NA,Yes,,2022-06-14
+Mission Viejo,L04-266-5,Flowing,0.215282,NA,Yes,Direct Connection,2022-06-14
+Mission Viejo,L04-301-1 (L04P08),,NA,NA,,,2022-06-22
+Mission Viejo,L04-672-1,,0.106,0.059,Yes,,2022-06-29
+Mission Viejo,L04-672-1,Flowing,0.109412,NA,Yes,Partial - Significant Distance,2022-06-29
+Orange Co,J01-9364-3 (J01P21),Pooled or Ponded,NA,NA,,Direct Connection,2022-06-28
+Orange Co,J01-9364-4,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-28
+Orange Co,L01-335-1,Flowing,0.007,0.004,,,2022-06-17
+Orange Co,L01-335-1,Flowing,0.006857,NA,,Direct Connection,2022-06-17
+Orange Co,L01-335-2,Pooled or Ponded,NA,NA,,Direct Connection,2022-06-17
+Orange Co,L01-340-1,Flowing,0.021,0.008,Yes,,2022-06-16
+Orange Co,L01-340-1,Flowing,0.017829,NA,Yes,Undetermined,2022-06-16
+Orange Co,L01-404-1,Flowing,NA,0.025,Yes,,2022-06-16
+Orange Co,L01-404-1,Flowing,0.063,NA,Yes,Undetermined,2022-06-16
+Orange Co,L01-404-2,Flowing,NA,0.021,,,2022-06-16
+Orange Co,L01-404-2,Flowing,0.096028,NA,,Undetermined,2022-06-16
+Orange Co,L01-414-3,Pooled or Ponded,0.015,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-16
+Orange Co,L01-458-1,Pooled or Ponded,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-05-31
+Orange Co,L01-471-1,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-05-31
+Orange Co,L01-494-1,Flowing,0.1575,NA,,Undetermined,2022-05-31
+Orange Co,L01-514-1,Pooled or Ponded,NA,NA,,Undetermined,2022-06-17
+Orange Co,L01-517-3,Pooled or Ponded,NA,NA,,Undetermined,2022-05-31
+Orange Co,L01-517-6,Flowing,0.03,NA,,Undetermined,2022-05-31
+Orange Co,L01-517-7,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-05-31
+Orange Co,L02-359-1 (L02P43),Flowing,0.0045,NA,,Undetermined,2022-06-17
+Orange Co,L02-374-1 (L02P50),Flowing,0.190157,NA,Yes,Undetermined,2022-06-16
+Orange Co,L02-374-2 (MVL02P20),Flowing,0.01,NA,,Undetermined,2022-06-17
+Orange Co,L02-401-1,Pooled or Ponded,NA,NA,,Direct Connection,2022-06-08
+Orange Co,L02-401-2 (COL02P55),Pooled or Ponded,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-16
+Orange Co,L05-049-1,Flowing,0.539,NA,Yes,,2022-06-16
+Orange Co,L05-049-1,Flowing,0.430769,NA,Yes,Direct Connection,2022-06-16
+Orange Co,L05-489-3,Flowing,1.552,NA,Yes,,2022-06-16
+Orange Co,L05-489-3,Flowing,1.516667,NA,Yes,Direct Connection,2022-06-16
+Orange Co,L05-489-3d,Flowing,1.96248,NA,,Direct Connection,2022-06-16
+Orange Co,L05-489-4,Pooled or Ponded,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-16
+Orange Co,L05-489-7,Flowing,NA,0.013,,,2022-06-16
+Orange Co,L05-489-7,Pooled or Ponded,0.113565,NA,,Direct Connection,2022-06-16
+Rancho Santa Margarita,L01-223-1 (L08TBN1),Flowing,8.33e-4,NA,,Undetermined,2022-06-27
+Rancho Santa Margarita,L01-731-1 (L08TBN2),Flowing,0.642857,NA,Yes,Undetermined,2022-06-27
+Rancho Santa Margarita,L02-166-3 (L02P26),Flowing,0,0.021,Yes,,2022-06-27
+Rancho Santa Margarita,L02-166-3 (L02P26),Flowing,0.033638,NA,Yes,Undetermined,2022-06-27
+Rancho Santa Margarita,L02-246-1 (L11P01),Flowing,0.07875,NA,Yes,Direct Connection,2022-06-27
+Rancho Santa Margarita,L02-641-1,Flowing,0.0468,NA,Yes,Direct Connection,2022-06-27
+Rancho Santa Margarita,L02-641-2,,0.518,0.05,Yes,,2022-06-27
+Rancho Santa Margarita,L02-641-2,Flowing,0.5175,NA,Yes,Direct Connection,2022-06-27
+San Clemente,M01-042-1 (M01S01),Flowing,NA,0.001,Yes,,2022-06-30
+San Clemente,M01-042-1 (M01S01),Flowing,0.0016,NA,Yes,Partial - Significant Distance,2022-06-30
+San Clemente,M01-047-1,Flowing,0.2394,NA,Yes,Direct Connection,2022-06-30
+San Clemente,M02-032-1,Flowing,0.10395,NA,Yes,Direct Connection,2022-06-30
+San Clemente,M02-085-1 (M02P06),Flowing,NA,0.016,Yes,,2022-06-30
+San Clemente,M02-085-1 (M02P06),Flowing,0.012329,NA,Yes,Direct Connection,2022-06-30
+San Clemente,M02-085-2,Flowing,NA,0.027,Yes,,2022-06-30
+San Clemente,M02-085-2,Flowing,0.134266,NA,Yes,Direct Connection,2022-06-30
+San Juan Capistrano,L01-601-1,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-28
+San Juan Capistrano,L01-724-1 (L01S01),Flowing,0.07102,NA,Yes,Partial - Significant Distance,2022-06-22
+San Juan Capistrano,L01-724-4 (L01P03),Flowing,0.092975,NA,Yes,Direct Connection,2022-06-22
+San Juan Capistrano,L01-726-8,Flowing,0.005769,NA,,Partial - Significant Distance,2022-06-28
+San Juan Capistrano,L01-726-9,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-28
+San Juan Capistrano,L01-749-2d,Flowing,0.08,NA,,Undetermined,2022-06-22
+San Juan Capistrano,L01-766-7,Flowing,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-28
+San Juan Capistrano,L01-766-8,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-28
+San Juan Capistrano,L01-766-9,Pooled or Ponded,NA,NA,Yes,Undetermined,2022-06-28
+San Juan Capistrano,L02-541-2,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-28
+San Juan Capistrano,L02-541-6,Flowing,NA,NA,,Direct Connection,2022-06-28
+San Juan Capistrano,L02-541-7,Dry,NA,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-28
+San Juan Capistrano,L02-541-9 (L02P02),Flowing,0.077,NA,,None - Flow Infiltrates or Outfall is Dry,2022-06-22
+San Juan Capistrano,L02-571-5 (L02TBN2),Pooled or Ponded,NA,NA,,Direct Connection,2022-06-28
+San Juan Capistrano,L05-503-1,Flowing,0.034286,NA,Yes,Direct Connection,2022-06-22
