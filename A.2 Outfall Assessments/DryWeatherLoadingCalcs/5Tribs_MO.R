@@ -16,11 +16,13 @@ Trib$FACILITYID<-sub("J01-10041-2", "J01-10041-2 (J03P13)",Trib$FACILITYID)
 Trib$FACILITYID<-sub("J01-9007-1", "J01-9007-1 (J02P05)",Trib$FACILITYID)
 Trib$FACILITYID<-sub("J01-10004-1", "J01-10004-1 (J01P01)",Trib$FACILITYID)
 Trib$FACILITYID<-sub("I01-11343-2", "I01-11343-2 (I02P18)",Trib$FACILITYID)
-Trib$FACILITYID<-sub("L01-728-4", "L01-728-4 (L01-DP)",Trib$FACILITYID)
 Trib$FACILITYID<-sub("J01-9264-1", "J01-9264-1 (J01P06)",Trib$FACILITYID)
 Trib$FACILITYID<-sub("I01-11216-1", "I01-11216-1 (I02P13)",Trib$FACILITYID)
 Trib$FACILITYID<-sub("J01-9066-1", "J01-9066-1 (J01P04)",Trib$FACILITYID)
 Trib$FACILITYID<-sub("J01-9364-3", "J01-9364-3 (J01P21)",Trib$FACILITYID) 
+
+
+
 
 
 MO <-"A.2 Outfall Assessments/DryWeatherLoadingCalcs/Input/MO2022.csv"
@@ -30,8 +32,11 @@ MO<-read.csv(MO) %>%
 
 swDischarge<- arc.open('C:/Users/givens/OneDrive - County of Orange/Shared with Everyone/Outfall/OutfallFieldScreen/Results/SPOCDSQL1205.sde/OCEnvRes.OCENVRESUSER.swDischargePoint') %>%
   arc.select() %>%
-  tibble::as_tibble() %>% 
-  select(FACILITYID, JURISDICTI, AVGDISCHARGE, SAMPLEDRY,PERSISTENTFLOW)
+  tibble::as_tibble() %>%
+  filter(MANAGEMENT=='SOUTH') %>%
+  select(FACILITYID, JURISDICTI, AVGDISCHARGE, SAMPLEDRY,PERSISTENTFLOW) 
+
+
 
 DischargePointTrib <-   Trib %>%
   right_join(., MO,        
@@ -59,6 +64,7 @@ JURISinTRIBS$FACILITYID<-sub("L02-366-1 (L02-P14)", "L02-366-1 (MVL02P14)",JURIS
 JURISinTRIBS$FACILITYID<-sub("L02-622-2", "L02-622-2 (L02P32)",JURISinTRIBS$FACILITYID)
 JURISinTRIBS$FACILITYID<-sub("L03-316-3", "L03-316-3 (L03P12)",JURISinTRIBS$FACILITYID)
 JURISinTRIBS$FACILITYID<-sub("L03-662-3", "L03-662-3 (L03P16)",JURISinTRIBS$FACILITYID)
+JURISinTRIBS$FACILITYID<-sub("L03-240-1 (L30P14)", "L03-240-1 (L03P14)",JURISinTRIBS$FACILITYID)
 JURISinTRIBS$FACILITYID<-sub("SC10-075-3", "SC10-075-3 (M00S01)",JURISinTRIBS$FACILITYID)
 JURISinTRIBS$FACILITYID<-sub("J01-10041-2", "J01-10041-2 (J03P13)",JURISinTRIBS$FACILITYID)
 JURISinTRIBS$FACILITYID<-sub("J01-9007-1", "J01-9007-1 (J02P05)",JURISinTRIBS$FACILITYID)
@@ -72,15 +78,20 @@ JURISinTRIBS$FACILITYID<-sub("J01-9364-3", "J01-9364-3 (J01P21)",JURISinTRIBS$FA
 
 
 JURISinTRIBS_MO <-JURISinTRIBS %>%
-  right_join(., MO,
-             by = c('FACILITYID'='Facility.Identifier')) 
+  right_join(., DischargePointTrib,
+             by = c('FACILITYID'='FACILITYID')) 
 
 saveRDS(JURISinTRIBS_MO, file = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/JURISinTRIBS_MO.rds'))
 write_csv(JURISinTRIBS_MO, path = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/JURISinTRIBS_MO.csv'))
 
-values <- list() 
-values[['R9_Cities']] <- 'A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/R9_Cities.rds'
-R9_Cities <-  readRDS(values[["R9_Cities"]])
+file_url<-"A.2 Outfall Assessments/DryWeatherLoadingCalcs/Input/juris_area_summary.csv"
+SOCWMA_Cities<-read.csv(file_url) %>%
+  select('jurisdicti', 'acres_juris_soc') %>%
+  filter(!is.na(acres_juris_soc)) 
+
+SOCWMA_Cities <- SOCWMA_Cities[1:12, ]
+
+saveRDS(SOCWMA_Cities, file = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Input/SOCWMA_Cities.rds'))
 
 values <- list() 
 values[['DischargePointTrib']] <- 'A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/DischargePointTrib.rds'
@@ -92,13 +103,12 @@ JURISinTRIBS2 <- JURISinTRIBS_MO %>%
   #create a new column for jurisdiction (use JURISDICTI2, except for when no tributary is drawn, use jurisdiction of discharge point)
   mutate(JURISDICTI3 = JURISDICTI2) %>%
   mutate(JURISDICTI3=coalesce(JURISDICTI3, JURISDICTI)) %>%
-  full_join(., R9_Cities, by=c('JURISDICTI3' = 'JURISDICTI')) %>%
-  left_join(., DischargePointTrib, by=c('FACILITYID', 'JURISDICTI', 'INSPECTED', 'POINT_Y', 'POINT_X', 'PERSISTENTFLOW', 'OCFS', 'DRYSAMPLED', 'ACCESSIBILITY', 'area_acres', 'AVGDISCHARGE'))
+  full_join(., SOCWMA_Cities, by=c('JURISDICTI3' = 'jurisdicti')) 
 
 saveRDS(JURISinTRIBS2, file = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/JURISinTRIBS2.rds'))
 write_csv(JURISinTRIBS2, path = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/JURISinTRIBS2.csv'))
 
-JURISinTRIBS2b<-JURISinTRIBS2 %>%
+JURISinTRIBS2b<-JURISinTRIBS2 %>%  #outfall nearest receiving water
   #left_join(., DischargePointTrib, by=c('FACILITYID', 'JURISDICTI')) %>%
   filter(FACILITYID != "J06-9362-1 (J06-P03)")  %>% #Dairy Fork
   filter(FACILITYID != "J01-9082-5 (J02P08)") %>% #Wood Canyon
@@ -126,9 +136,9 @@ JURISinTRIBS2c<- JURISinTRIBS2b %>%
   group_by(JURISDICTI3) %>%
   mutate(AcresJO=sum(AREA)) %>% 
   ungroup() %>%
-  select('FACILITYID','AREA', 'area_acres', 'JURISDICTI3', 'AreaJ', 'AcresJO', 'sumNA', 'PERCENTAGE') %>%
+  select('FACILITYID','AREA', 'area_acres', 'JURISDICTI3', 'acres_juris_soc', 'AcresJO', 'sumNA', 'PERCENTAGE') %>%
   unique() %>% 
-  filter(!is.na(AreaJ))
+  filter(!is.na(acres_juris_soc))
 
 AcresJ0 <- JURISinTRIBS2c %>%  #area of delineated tribs
   select('AcresJO', 'JURISDICTI3', 'sumNA') %>%
@@ -138,15 +148,112 @@ DischargePointTribAfilla <- JURISinTRIBS2b %>%  #outfalls without tribs delineat
   filter(is.na(AREA)) %>%
   left_join(., AcresJ0, by=c('JURISDICTI3', 'sumNA')) %>%
   mutate(PERCENTAGE=as.numeric(100)) %>%
-  select('FACILITYID','AREA', 'area_acres', 'JURISDICTI3', 'AreaJ', 'AcresJO', 'sumNA', 'PERCENTAGE') 
+  select('FACILITYID','AREA', 'area_acres', 'JURISDICTI3', 'acres_juris_soc', 'AcresJO', 'sumNA', 'PERCENTAGE') 
 
 DischargePointTrib_alla <- bind_rows(DischargePointTribAfilla, JURISinTRIBS2c) %>% #areas with and without delineations
-  right_join(., JURISinTRIBS2, by=c('FACILITYID', 'AREA', 'JURISDICTI3', 'AreaJ', 'area_acres', 'PERCENTAGE')) %>% #join to get all outfall, not just outfalls nearest receiving water
-  replace_na(list(PERCENTAGE='100')) %>%
-  mutate(AcresOb= ifelse(is.na(AREA), ((AreaJ-AcresJO)/sumNA), AREA)) %>%
+  right_join(., JURISinTRIBS2, by=c('FACILITYID', 'AREA', 'JURISDICTI3', 'acres_juris_soc', 'area_acres', 'PERCENTAGE')) %>% #join to get all outfall, not just outfalls nearest receiving water
+  replace_na(list(PERCENTAGE=100)) %>%
+  mutate(PERCENTAGE=as.numeric(PERCENTAGE)) %>%
+  mutate(AcresOb= ifelse(is.na(AREA), ((acres_juris_soc-AcresJO)/sumNA), AREA)) %>%
   group_by(JURISDICTI3) %>%
-  mutate(PERCENT_o =(100*(AcresOb/AreaJ)))
+  mutate(PERCENT_o =(100*(AcresOb/acres_juris_soc)))
+
+str(DischargePointTrib_alla)
 
 saveRDS(DischargePointTrib_alla, file = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/DischargePointTrib_all.rds'))
 write_csv(DischargePointTrib_alla, path = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/DischargePointTrib_all.csv'))
+
+
+MO <-"A.2 Outfall Assessments/DryWeatherLoadingCalcs/Input/MO2022.csv"
+
+MO<-read.csv(MO) %>%
+  select('Facility.Identifier') %>%
+  unique() 
+
+MO_<- arc.open('C:/Users/givens/OneDrive - County of Orange/Shared with Everyone/Outfall/OutfallFieldScreen/Results/SPOCDSQL1205.sde/OCEnvRes.OCENVRESUSER.swDischargePoint') %>%
+  arc.select() %>%
+  tibble::as_tibble() %>%
+  filter(MANAGEMENT=='SOUTH') %>%
+  right_join(., MO, by =c('FACILITYID'='Facility.Identifier')) %>%
+  select(FACILITYID, AVGDISCHARGE, JURISDICTI, SAMPLEDRY, PERSISTENTFLOW, PRIORITY, SAMPLEDRY) %>%
+  unique()
+
+
+saveRDS(MO_, file = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/MO_.rds'))
+write_csv(MO_, path = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/MO_.csv'))
+
+Inventory <- arc.open('C:/Users/givens/OneDrive - County of Orange/Shared with Everyone/Outfall/OutfallFieldScreen/Results/SPOCDSQL1205.sde/OCEnvRes.OCENVRESUSER.swDischargePoint') %>%
+  arc.select() %>%
+  tibble::as_tibble() %>%
+  filter(MANAGEMENT=='SOUTH') 
+  
+  #FACTYPE 0: Outfall; 1: Box; 2: Culvert' 3: Manhole
+Inventory$FACTYPE<-sub("0", "Outfall",Inventory$FACTYPE)
+Inventory$FACTYPE<-sub("1", "Box",Inventory$FACTYPE)
+Inventory$FACTYPE<-sub("2", "Culvert",Inventory$FACTYPE)
+Inventory$FACTYPE<-sub("3", "Manhole",Inventory$FACTYPE)
+
+#Inspected:  0: Unverified; 1: Verified; 2: Not-Found;  3: Removed from Inventory 
+Inventory$INSPECTED<-sub("0", "Unverified",Inventory$INSPECTED)
+Inventory$INSPECTED<-sub("1", "Verified",Inventory$INSPECTED)
+Inventory$INSPECTED<-sub("2", "Not-Found",Inventory$INSPECTED)
+Inventory$INSPECTED<-sub("3", "Removed from Inventory",Inventory$INSPECTED)
+Inventory$PRIORITY<-sub("2", "Priority", Inventory$PRIORITY)
+Inventory$PRIORITY[Inventory$PRIORITY==1] <- NA
+Inventory$ACCESSIBILITY<-sub("1", "Easily accessibility",Inventory$ACCESSIBILITY)
+Inventory$ACCESSIBILITY<-sub("2", "Difficult accessibility",Inventory$ACCESSIBILITY)
+Inventory$ACCESSIBILITY<-sub("3", "Unsafe accessibility",Inventory$ACCESSIBILITY)
+Inventory$ACCESSIBILITY<-sub("4", "Private Property",Inventory$ACCESSIBILITY)
+Inventory$ACCESSIBILITY<-sub("5", "Unaccessible",Inventory$ACCESSIBILITY)
+Inventory$SAMPLECHWSRSDRY <- sub("1", "Yes", Inventory$SAMPLECHWSRSDRY)
+Inventory$SAMPLECHWSRSWET <- sub("1", "Yes", Inventory$SAMPLECHWSRSWET)
+Inventory$SAMPLEDRY <- sub("1", "Yes", Inventory$SAMPLEDRY)
+Inventory$SAMPLEWET <- sub("1", "Yes", Inventory$SAMPLEWET)
+
+Inventory$OCFSLOCATION <- sub("1", "Yes", Inventory$OCFSLOCATION)
+
+saveRDS(Inventory, file = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/Inventory.rds'))
+write_csv(Inventory, path = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/Inventory.csv'))
+
+
+MO<- read.csv( "A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/MO_.csv") %>% 
+  select(FACILITYID, JURISDICTI, PRIORITY) %>%
+  filter(PRIORITY==1)
+
+sbpat_landuse_Geosyntec <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Input/sbpat_landuse_Geosyntec.csv') %>%
+  mutate_each(funs(as.numeric), LSPC_LU_CODE) %>% 
+  filter(!is.na(Description))
+
+landuse_trib_202122 <- read.csv( "A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_lspc_trib_2022.csv")  
+  
+landuse_Geosyntec <- data.frame(
+  RC_Group = c('Agriculture', 'Commercial', 'Developed Open Space', 'Education', 'Freeway', 'Light Industrial', 'Multi-family Residential', 'Open Space', 'Single Family Residential', 'Streets and Roads', 'Water'),
+  RC = c(0.222, 0.486, 0.217, 0.422, 0.450, 0.414, 0.485, 0.078, 0.405, 0.471, 0.797),
+  stringsAsFactors = FALSE
+)
+
+landuse_lspc_trib_2022<-distinct(sbpat_landuse_Geosyntec, LSPC_LU_CODE, .keep_all=TRUE) %>%
+  select(LSPC_LU_DESC, LSPC_LU_CODE, RC_Group, EMC_Group
+  ) %>%
+  left_join(., landuse_Geosyntec) %>%
+  left_join(
+    .,
+    landuse_trib_202122,
+    by = c('LSPC_LU_DESC', 'LSPC_LU_CODE', 'RC_Group', 'EMC_Group', 'RC'))
+
+
+MO_lu_P <- MO %>%
+  left_join(., landuse_lspc_trib_2022, by=c('FACILITYID')) %>%
+  filter(!is.na(LSPC_LU_DESC)) %>%
+  group_by(JURISDICTI) %>%
+  mutate(JTribArea=sum(AREA)) %>%
+  group_by(JURISDICTI, EMC_Group) %>%
+  mutate(EMCgroupArea=sum(AREA)) %>%
+  mutate(PerCentLU=100*(EMCgroupArea/JTribArea))
+
+
+write_csv(MO_lu_P, path = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/LUinHPMO.csv'))
+
+
+
 

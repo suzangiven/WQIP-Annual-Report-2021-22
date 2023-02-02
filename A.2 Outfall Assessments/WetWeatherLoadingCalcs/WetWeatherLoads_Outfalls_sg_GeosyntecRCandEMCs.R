@@ -14,7 +14,7 @@ library(hms)
 library(arcgisbinding) #install.packages("arcgisbinding", repos="https://r.esri.com", type="win.binary") #install bridge manually from GitHub:  https://github.com/R-ArcGIS/r-bridge/releases/tag/v1.0.1.232#
 arc.check_product()
 
-source('A.2 Outfall Assessments/project_setupww.R')
+source('A.2 Outfall Assessments/WetWeatherLoadingCalcs/project_setupww.R')
 
 #   ____________________________________________________________________________
 #   Function Definitions                                                    ####
@@ -27,27 +27,30 @@ source('A.2 Outfall Assessments/project_setupww.R')
 
 # EMC data 
 getwd()
-setwd("C:/Users/givens/Documents/GitHub/WQIP-Annual-Report-2020-21")
 
-emc1<- "A.2 Outfall Assessments/WetWeatherLoadingCalcs/Input/WetWeatherDataandSALsAssessment2020-21.xlsx"
+emc1<- "A.2 Outfall Assessments/WetWeatherLoadingCalcs/Input/WetWeatherDataandSALsAssessment2021-22.xlsx"
 
 emc<-read_excel(emc1,'Horizon wide units') %>%
-  mutate(`TN - mg/L` = `Nitrate + Nitrite as N - mg/L` + `Nitrogen, Total Kjeldahl - mg/L`)
+  mutate(`TN - mg/L` = `Nitrate + Nitrite as N - mg/L` + `Nitrogen, Total Kjeldahl - mg/L`) %>%
+  filter(!is.na(Station))
 
 
 #emc$FacilityID<-sub("SC06-146-2", "SC06-146-2 (M00P02)",emc$FacilityID)
 emc$Station<-sub("L01-724-4", "L01-724-4 (L01P03)",emc$Station)
 emc$Station<-sub("L01-728-5", "L01-728-5 (L01-DP)",emc$Station)
 emc$Station<-sub("L02-166-2", "L02-166-2 (L02P25)",emc$Station)
-emc$Station<-sub("L03-708-11", "L03-708-11 (L03P05)",emc$Station)
 emc$Station<-sub("J07-9109-4", "J07-9109-4 (J07P02)",emc$Station)
-emc$Station<-sub("J01-9992-1", "J01-9992-1 (J01P27)",emc$Station) 
+emc$Station<-sub("J01-9992-1", "J01-9992-1 (J01P27)",emc$Station)
+emc$Station<-sub("J07P02", "J07-9109-4 (J07P02)",emc$Station) 
+emc$Station<-sub("L03P05", "L03-708-11 (L03P05)",emc$Station) 
+
+
 
 ##  ............................................................................
 ##  Hydrologic Info                                                         ####
 
 # Nearest coop rain gage to swDischargePoint Facility's
-stn_near <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/swDischargePoint_Near_Coop.csv')
+stn_near <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Input/Rain/outfall_near_rain_gage.csv')
 #stn_near$FacilityID<-sub("SC06-146-2", "SC06-146-2 (M00P02)",stn_near$FacilityID)
 #stn_near$FacilityID<-sub("L01-724-4", "L01-724-4 (L01P03)",stn_near$FacilityID)
 #stn_near$FacilityID<-sub("L01-728-5", "L01-728-5 (L01-DP)",stn_near$FacilityID)
@@ -57,7 +60,7 @@ stn_near <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/swDischarge
 
 # Hydstra rainfall data Point format
 #dr_rain <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Input/Rain/SOCWMA_coop_202021.CSV', skip = 3, col_names = c('Time', 'Trabuco Forestry', 'Sulphur Creek Dam', 'El Toro', 'Palisades Reservoir', 'Laguna Beach', 'Dana Point', 'Upper Aliso')) 
-dr_rain <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Input/Rain/SOCWMA_coop_202021.CSV', skip = 3, col_names=c('Time', 'TRABUCO', 'SULPHURCREEK', 'ELTORO', 'PALISADES', 'LAGUNABEACH', 'DANAPOINT', 'UPPERALISO', 'TUCKER')) %>%
+dr_rain <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Input/Rain/SOCWMA_coop_202122.CSV', skip = 3, col_names=c('Time', 'TRABUCO', 'SULPHURCREEK', 'ELTORO', 'PALISADES', 'LAGUNABEACH', 'DANAPOINT', 'UPPERALISO', 'TUCKER')) %>%
   select(c(-UPPERALISO))
 
 ##  ............................................................................
@@ -72,22 +75,14 @@ stn_acres <- arc.open('SPOCDSQL1205.sde/OCEnvRes.OCENVRESUSER.swDischargePoint_T
 
 stn_acres$FACILITYID<-sub("J01-9224-1", "J01-9224-1 (J01P24)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("J01-9224-2", "J01-9224-2 (J01P25)",stn_acres$FACILITYID)
-stn_acres$FACILITYID<-sub("J01-9992-1", "J01-9992-1 (J01P27)",stn_acres$FACILITYID)
-stn_acres$FACILITYID<-sub("J06-9362-1", "J06-9362-1 (J06-03)",stn_acres$FACILITYID)
-stn_acres$FACILITYID<-sub("K01-12177-1", "K01-12177-1 (K01P07)",stn_acres$FACILITYID)
-stn_acres$FACILITYID<-sub("L01-731-1", "L01-731-1 (L08TBN2)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("L01-766-2", "L01-766-2 (L01S06)",stn_acres$FACILITYID)
-stn_acres$FACILITYID<-sub("L02-166-3", "L02-166-3 (L02P26)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("L02-366-1 (L02-P14)", "L02-366-1 (MVL02P14)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("L02-622-2", "L02-622-2 (L02P32)",stn_acres$FACILITYID)
-stn_acres$FACILITYID<-sub("L03-316-3", "L03-316-3 (L03P12)",stn_acres$FACILITYID)
-stn_acres$FACILITYID<-sub("L03-662-3", "L03-662-3 (L03P16)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("SC10-075-3", "SC10-075-3 (M00S01)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("J01-10041-2", "J01-10041-2 (J03P13)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("J01-9007-1", "J01-9007-1 (J02P05)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("J01-10004-1", "J01-10004-1 (J01P01)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("I01-11343-2", "I01-11343-2 (I02P18)",stn_acres$FACILITYID)
-stn_acres$FACILITYID<-sub("J01-9131-1", "J01-9131-1 (J01P28)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("J01-9264-1", "J01-9264-1 (J01P06)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("I01-11216-1", "I01-11216-1 (I02P13)",stn_acres$FACILITYID)
 stn_acres$FACILITYID<-sub("J01-9066-1", "J01-9066-1 (J01P04)",stn_acres$FACILITYID)
@@ -102,11 +97,11 @@ landuse_Geosyntec <- data.frame(
 )
 
 # sbpat land use emc values
-sbpat_emc_Geosyntec <- read_excel('A.2 Outfall Assessments/WetWeatherLoadingCalcs/sbpat_EMC_Geosyntec.xlsx') %>% 
+sbpat_emc_Geosyntec <- read_excel('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Input/sbpat_EMC_Geosyntec.xlsx') %>% 
   gather(EMC_Group, EMC, `agriculture`:WATER) 
 
 # Land use codes & runoff coefficient group (SBPAT, Geosyntec)
-sbpat_landuse_Geosyntec <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/sbpat_landuse_Geosyntec.csv') %>%
+sbpat_landuse_Geosyntec <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Input/sbpat_landuse_Geosyntec.csv') %>%
   mutate_each(funs(as.numeric), LSPC_LU_CODE) %>% 
   filter(!is.na(Description))
 
@@ -125,30 +120,9 @@ sbpat_landuse_Geosyntec <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCa
                                #     'Education',
                                 #    EMC_Group_Final)))
 
-R9_Cities_Clip<-arc.open('H:/ArcGIS/Projects/StormDrainOutfall/StormDrainOutfall.gdb/R9_Cities_Clip') %>%
-  arc.select() %>%
-  tbl_df()
+R9_Cities <- read_csv('A.2 Outfall Assessments/juris_area_summary.csv') %>%
+  select(jurisdicti, acres_juris_soc)
 
-R9_Clip<-arc.open('H:/ArcGIS/Projects/StormDrainOutfall/StormDrainOutfall.gdb/R9_Clip') %>%
-  arc.select() %>%
-  tbl_df()
-
-#find total acres in Jurisdiction in R9
-RB <- arc.open('H:/ArcGIS/Projects/StormDrainOutfall/StormDRainOutfall.gdb/CityInRB') %>%
-  arc.select() %>%
-  tbl_df() 
-
-Cities <- arc.open('H:/ArcGIS/Projects/StormDrainOutfall/StormDRainOutfall.gdb/JURISDICTI_Summary') %>%
-  arc.select() %>%
-  tbl_df()  
-
-R9_Cities <-full_join(Cities, RB, by=c("Join_ID")) %>%
-  as_tibble() %>%
-  filter(rb=='9') %>%
-  select('JURISDICTI', 'sum_Area_ACRES.x') %>%
-  filter(JURISDICTI != 'NEWPORT BEACH'& JURISDICTI != 'IRVINE') 
-
-colnames(R9_Cities)[2] <- "AreaJ"
 
 saveRDS(R9_Cities, file = here('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/R9_Cities.rds'))
 write_csv(R9_Cities, path = here('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/R9_Cities.csv')) 
@@ -156,75 +130,46 @@ write_csv(R9_Cities, path = here('A.2 Outfall Assessments/WetWeatherLoadingCalcs
 
 # Land use by jurisdiction sum_Area_ACRES.x is the area within R9 after clip; Area is total acres (including outside of R9)
 # Use codes from 
-landuse_jurisdiction_2021a <- arc.open('H:/ArcGIS/Projects/StormDrainOutfall/StormDrainOutfall.gdb/LU_Code_Summary_Juris') %>%
-  arc.select() %>%
-  tbl_df() %>%
-  left_join(
-    .,
-    arc.open('H:/ArcGIS/Projects/StormDrainOutfall/StormDrainOutfall.gdb/LSPC_LU_CODE_Summary') %>%
-      arc.select() %>%
-      tbl_df(),
-    by = 'Join_ID'
- ) 
-  
-write_csv(landuse_jurisdiction_2021a, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_jurisdiction_2021a.csv'))
-getwd()
-
-
-landUJurisd<-read.csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_jurisdiction_2021a.csv') 
-sbpat_landuse_RCandEMC<-read.csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/sbpat_landuse_RCandEMC.csv')
-
-
-  LandUse<-left_join(landUJurisd,sbpat_landuse_RCandEMC, by=c('LSPC_LU_EDIT'='LSPC_LU_DESC'))
-  write_csv(LandUse, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/LandUse.csv'))
-  getwd()                                                                                                  
-
-#%>% 
-    #mutate(
-      #HRU_Composite_LSPC_LU_CODE = as.numeric(HRU_Composite_LSPC_LU_CODE)
-   # ) 
-#filter(HRU_Composite_LSPC_LU_CODE!=80) #remove areas of water bodies
 
   
 # swDischargePoint land use data
 # land use information for each outfall tributary
-landuse_trib_202021 <- arc.open('H:/ArcGIS/Projects/StormDrainOutfall/StormDrainOutfall.gdb/OCEnvRes_LandUseTrib') %>% 
-  arc.select() %>% 
-  tbl_df() %>% 
-  select(-OBJECTID) %>% 
-   #%>%  #For area around Oso Reservoir, assume trib areas contribute to area for storm flow calcs, remove the areas only affecting dry weather loading calcs
+R9_Cities <- read_csv('A.2 Outfall Assessments/juris_area_summary.csv') %>%
+  select(jurisdicti, acres_juris_soc)
+
+landuse_trib_202122 <- read_csv('A.2 Outfall Assessments/trib_lu_area.csv') %>%
+  select(-OBJECTID) %>%
+ #%>%  #For area around Oso Reservoir, assume trib areas contribute to area for storm flow calcs, remove the areas only affecting dry weather loading calcs
   filter(FACILITYID!='L03-214-2')%>%
   filter(FACILITYID!='L03-073-3')%>%
   filter(FACILITYID!='L03-141-1')
 
-landuse_trib_202021$FACILITYID<-sub("J01-9224-1", "J01-9224-1 (J01P24)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("J01-9224-2", "J01-9224-2 (J01P25)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("J01-9992-1", "J01-9992-1 (J01P27)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("J06-9362-1", "J06-9362-1 (J06-03)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("K01-12177-1", "K01-12177-1 (K01P07)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("L01-731-1", "L01-731-1 (L08TBN2)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("L01-766-2", "L01-766-2 (L01S06)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("L02-166-3", "L02-166-3 (L02P26)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("L02-366-1 (L02-P14)", "L02-366-1 (MVL02P14)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("L02-622-2", "L02-622-2 (L02P32)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("L03-316-3", "L03-316-3 (L03P12)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("L03-662-3", "L03-662-3 (L03P16)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("SC10-075-3", "SC10-075-3 (M00S01)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("J01-10041-2", "J01-10041-2 (J03P13)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("J01-9007-1", "J01-9007-1 (J02P05)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("J01-10004-1", "J01-10004-1 (J01P01)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("I01-11343-2", "I01-11343-2 (I02P18)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("J01-9131-1", "J01-9131-1 (J01P28)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("J01-9264-1", "J01-9264-1 (J01P06)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("I01-11216-1", "I01-11216-1 (I02P13)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("J01-9066-1", "J01-9066-1 (J01P04)",landuse_trib_202021$FACILITYID)
-landuse_trib_202021$FACILITYID<-sub("J01-9364-3", "J01-9364-3 (J01P21)",landuse_trib_202021$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("J01-9224-1", "J01-9224-1 (J01P24)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("J01-9224-2", "J01-9224-2 (J01P25)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("K01-12177-1", "K01-12177-1 (K01P07)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("L01-766-2", "L01-766-2 (L01S06)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("L02-166-3", "L02-166-3 (L02P26)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("L02-366-1 (L02-P14)", "L02-366-1 (MVL02P14)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("L02-622-2", "L02-622-2 (L02P32)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("L03-662-3", "L03-662-3 (L03P16)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("SC10-075-3", "SC10-075-3 (M00S01)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("J01-10041-2", "J01-10041-2 (J03P13)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("J01-9007-1", "J01-9007-1 (J02P05)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("J01-10004-1", "J01-10004-1 (J01P01)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("I01-11343-2", "I01-11343-2 (I02P18)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("J01-9264-1", "J01-9264-1 (J01P06)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("I01-11216-1", "I01-11216-1 (I02P13)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("J01-9066-1", "J01-9066-1 (J01P04)",landuse_trib_202122$FACILITYID)
+landuse_trib_202122$FACILITYID<-sub("J01-9364-3", "J01-9364-3 (J01P21)",landuse_trib_202122$FACILITYID)
+landuse_lspc_trib_2022$FACILITYID<-sub("L01-728-8", "L01-728-8d",landuse_lspc_trib_2022$FACILITYID)
+landuse_lspc_trib_2022$FACILITYID<-sub("SC11-035-1", "SC11-035-1d",landuse_lspc_trib_2022$FACILITYID)
+
 
   #filter(HRU_Composite_LSPC_LU_CODE!=80) #remove areas of water bodies
   
-write.table(landuse_trib_202021, file = 'clipboard-16384', sep = '\t')
+write.table(landuse_trib_202122, file = 'clipboard-16384', sep = '\t')
 
-write_csv(landuse_trib_202021, path = here('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_trib_202021.csv'))
+write_csv(landuse_trib_202122, path = here('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_trib_202122.csv'))
 
 
 #   ____________________________________________________________________________
@@ -243,7 +188,7 @@ str(EMCacres)
 EMCRain <- left_join(
   EMCacres,
   stn_near,
-  by=c('Station'='FacilityID')  
+  by=c('Station'='FACILITYID')  
 ) 
 #%>% 
   #mutate(
@@ -272,7 +217,7 @@ rain_total <- dr_rain %>%
 EMCRainTot <- left_join(
   EMCRain,
   rain_total,
-  by = c('Cooperative' = 'Station')
+  by = c('station' = 'Station')
 ) 
 
 # Calculate weighted sample volumes for each composite sample from EMC data - typically don't need to do this since only each outfall is sampled once.   An outfall would be sampled twice if there were problems the first try, and there wasn't enough sample volume for everything
@@ -316,14 +261,15 @@ event_total <- dr_rain %>%
   str(EMCRainTotb)
   
  
-  event_totalb <- event_total %>%   #only composite samples, grab samples are left out
+  event_totalb <- event_total  %>%  
+    select(-Time) %>%   #only composite samples, grab samples are left out
     group_by(Date, Station) %>%
     summarise(Total = sum(Total)) %>%
     as.data.table() %>%
     left_join(
       EMCRainTotb,
       .,
-      by = c('Cooperative' = 'Station')
+      by = c('station' = 'Station')
     ) %>%
     filter(!is.na(`Composite Begin`)) %>%
     group_by(Station, `Composite Begin`) %>%
@@ -347,58 +293,25 @@ event_total <- dr_rain %>%
  
  #jurisdictional land-use
   
-   landuse_jurisdiction_2021b <-landuse_jurisdiction_2021a %>%
-    select(c(JURISDICTI, sum_Area_ACRES.x, -LSPC_LU_EDIT)) %>%
-    unique() %>%
-    group_by(JURISDICTI) %>%
-    mutate(JURISareaR9=sum(sum_Area_ACRES.x)) %>%
-    select(c(-sum_Area_ACRES.x)) %>%
-    unique() %>%
-    ungroup()
+landuse_jurisdiction_2022 <- read_csv('A.2 Outfall Assessments/juris_lu_summary.csv')  
   
-  landuse_jurisdiction_2021c <-landuse_jurisdiction_2021a %>%
-    select(JURISDICTI,LSPC_LU_EDIT,sum_Area_ACRES.y) %>%
-    group_by(JURISDICTI, LSPC_LU_EDIT) %>%
-    mutate(LUarea=sum(sum_Area_ACRES.y)) %>%
-    select(-sum_Area_ACRES.y) %>%
-    unique() %>%
-    ungroup()
-  
-  landuse_jurisdiction_2021d <-landuse_jurisdiction_2021c %>%
-    group_by(JURISDICTI) %>%
-    mutate(AreaTotLU=sum(LUarea)) %>%
-    select(c(JURISDICTI, AreaTotLU)) %>%
-    unique() %>%
-    ungroup()
-  
-landuse_jurisdiction_2021e <- full_join(landuse_jurisdiction_2021d, landuse_jurisdiction_2021c, by= 'JURISDICTI') 
-    
-    
-    
-landuse_jurisdiction_2021 <- full_join(landuse_jurisdiction_2021b,landuse_jurisdiction_2021e, by= 'JURISDICTI') %>%
-    mutate(LUPercent=(LUarea/JURISareaR9)*100) %>%
-    select(-'JURISareaR9') %>%
-    full_join(., R9_Cities) %>%
-    filter(!is.na(AreaJ))
-  
-write_csv(landuse_jurisdiction_2021, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_jurisdiction_2021.csv'))
-  
+
 # Combine jurisdiction land use with Geosyntec rc and sbpat emc categories and run-off coefficient  see line 582
-landuse_lspc_juris_2021<-distinct(sbpat_landuse_Geosyntec, LSPC_LU_CODE, .keep_all=TRUE) %>%
+landuse_lspc_juris_2022<-distinct(sbpat_landuse_Geosyntec, LSPC_LU_CODE, .keep_all=TRUE) %>%
   select(LSPC_LU_DESC, LSPC_LU_CODE, RC_Group, EMC_Group
   ) %>%
   left_join(., landuse_Geosyntec) %>%
   left_join(
     .,
-    landuse_jurisdiction_2021,
-    by = c('LSPC_LU_DESC'='LSPC_LU_EDIT')) 
+    landuse_jurisdiction_2022,
+    by = c('LSPC_LU_DESC'='lspc_lu_edit')) 
 #%>% 
 #ungroup()
-write_csv(landuse_lspc_juris_2021, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_lspc_juris_2021.csv'))
+write_csv(landuse_lspc_juris_2022, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_lspc_juris_2022.csv'))
 
-SOCWMA_lu<-landuse_lspc_juris_2021 %>%
+SOCWMA_lu<-landuse_lspc_juris_2022 %>%
   group_by(EMC_Group) %>%
-  mutate(EMC_groupArea=sum(LUarea)) %>%
+  mutate(EMC_groupArea=sum(acres)) %>%
   ungroup() %>%
   select(EMC_Group, EMC_groupArea) %>%
   unique()
@@ -407,18 +320,28 @@ write_csv(SOCWMA_lu, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoading
 
 
 # Combine station land use with Geosyntec rc and sbpat emc categories and run-off coefficient
-  landuse_lspc_trib_2021<-distinct(sbpat_landuse_Geosyntec, LSPC_LU_CODE, .keep_all=TRUE) %>%
+  landuse_lspc_trib_2022<-distinct(sbpat_landuse_Geosyntec, LSPC_LU_CODE, .keep_all=TRUE) %>%
     select(LSPC_LU_DESC, LSPC_LU_CODE, RC_Group, EMC_Group
     ) %>%
     left_join(., landuse_Geosyntec) %>%
     left_join(
       .,
-      landuse_trib_202021,
+      landuse_trib_202122,
       by = c('LSPC_LU_DESC'='LSPC_LU_EDIT')) 
   #%>% 
   #ungroup()
-  write_csv(landuse_lspc_trib_2021, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_lspc_trib_2021.csv'))
+  write_csv(landuse_lspc_trib_2022, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_lspc_trib_2022.csv'))
  
+  landuse_lspc_trib_2022 <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_lspc_trib_2022.csv')
+  
+  landuse_lspc_trib_2022 <- read_csv('A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/landuse_lspc_trib_2022.csv')
+  
+  MO<- "A.2 Outfall Assessments/WetWeatherLoadingCalcs/MajorOutfalls_2022.xlsx"
+  MO<- read_excel( MO,'Sheet1') %>% 
+    select(`Facility Identifier`, Jurisdiction)
+  
+  MO_LU <- landuse_lspc_trib_2022 %>% 
+    left_join(., MO, by=c('FACILITYID'='Facility Identifier'))
 #   ____________________________________________________________________________
 #   Data analysis section                                                   ####
 
@@ -426,7 +349,7 @@ write_csv(SOCWMA_lu, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoading
 ##  Determine runoff coefficients                                           ####
 
 # Runoff coefficient 'RC' reality  #43560 cf in an acre-foot
-stn_RC_202021 <- EMCRainTot2 %>% 
+stn_RC_202122 <- EMCRainTot2 %>% 
   mutate(
     RC_Actual = `Stormflow Volume -cf` / (area_acres * (Rain_Event_Total / 12)*43560)   #- input parameters have been updated Jan 2020
   )
@@ -435,7 +358,7 @@ stn_RC_202021 <- EMCRainTot2 %>%
   #)
 
   # Runoff coefficient 'RC' modeled used for report
-RC_M <- landuse_lspc_trib_2021 %>% 
+RC_M <- landuse_lspc_trib_2022 %>% 
   group_by(FACILITYID) %>%  
   filter(!is.na(RC)) %>%
   summarise(
@@ -443,7 +366,7 @@ RC_M <- landuse_lspc_trib_2021 %>%
   )
 
 # Combine modeled and actual 'RC', then calculate 'RC' correction factor  #Actual discharge incorrect - input parameters have been updated Jan 2020
-stn_RC_202021 <- stn_RC_202021 %>% 
+stn_RC_202122 <- stn_RC_202122 %>% 
   left_join(
     .,
     RC_M,
@@ -455,43 +378,44 @@ stn_RC_202021 <- stn_RC_202021 %>%
   
   
 # Leave modeled (Geosyntec) RC as-is without correction factors for v2 analysis  sg:how is this different from landuse_rcGeosyntec - if RC_Actual were more accurate, than use the adjusted RC (Geosyntec) with CF applied
-RC_WMA <- landuse_lspc_trib_2021 %>% 
+RC_WMA <- landuse_lspc_trib_2022 %>% 
   group_by(RC_Group, LSPC_LU_DESC, FACILITYID) %>%
   summarise(
     RC_WMA = sum(RC * AREA) / sum(AREA))
  
 
-stn_RC_202021<-stn_RC_202021 %>% 
+stn_RC_202122<-stn_RC_202122 %>% 
   left_join(
     .,
     RC_WMA,
-    by=c('Station'='FACILITYID'))
+    by=c('Station'='FACILITYID')) %>%
+  filter(!is.na(Station)) 
 
-landuse_wcf<-landuse_lspc_trib_2021 %>% 
-  left_join(
+landuse_wcf<-landuse_lspc_trib_2022 %>% 
+  right_join(
     .,
-    stn_RC_202021,
+    stn_RC_202122,
     by = c('FACILITYID' = 'Station', 'RC'='RC_WMA', 'LSPC_LU_DESC'='LSPC_LU_DESC', 'RC_Group')
   ) %>%
   mutate (
     RCandCF=RC_CF*RC
-  )%>%
-  filter(!is.na(RC_Group)) %>%
-  filter(!is.na(RCandCF))
+  ) %>%
+  filter(!is.na(RC_Actual))
+  
 
 landuse_wcf2 <- landuse_wcf %>% 
   group_by(FACILITYID) %>%
   summarise(
     RC_WMAcf = sum(RCandCF * AREA) / sum(AREA))
 
-stn_RC_202021b<-
+stn_RC_202122b<-
   inner_join(
-    stn_RC_202021,
+    stn_RC_202122,
     landuse_wcf2,
     by = c('Station' = 'FACILITYID'))
          
 # Total stormwater runoff for each station, use RC_M for v2 analysis
-stn_RC_202021b <- stn_RC_202021b %>% 
+stn_RC_202122b <- stn_RC_202122b %>% 
   mutate(
     `Stormwater Volume (acre-ft)_RC_M` = RC_M * area_acres * (Rain_Gage_Total/ 12)
   ) %>%
@@ -500,7 +424,7 @@ stn_RC_202021b <- stn_RC_202021b %>%
   mutate(`Stormwater Volume (acre-ft)_RC_WMAcf` = RC_WMAcf * area_acres * (Rain_Gage_Total/ 12)
   )
 # Leave modeled (Geosyntec) RC as-is without correction factors for v2 analysis  
-write_csv(stn_RC_202021b, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/stn_RC_202021.csv'))
+write_csv(stn_RC_202122b, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/stn_RC_202122.csv'))
 
 
 ##  ............................................................................
@@ -550,8 +474,8 @@ stn_load <- stn_load2 %>%
   
   left_join(
     .,
-    stn_RC_202021b,
-    by = c('Station', 'Composite Begin', 'Composite End','Sample Type','Composite Start Time','Composite End Time','HSN', 'Fraction')
+    stn_RC_202122b,
+    by = c('Station', 'Composite Begin', 'Composite End','Sample Type','Composite Start Time','Composite End Time','HSN', 'Fraction', 'Collected Date')
   ) %>% 
  filter(!is.na(`Stormflow Volume -cf`)) %>% 
   
@@ -564,7 +488,7 @@ stn_load <- stn_load2 %>%
   mutate(Avg_Load_Annual = mean(Load_Annual)) %>% 
   ungroup() %>% 
   mutate(
-    PL_Actual = ifelse(Parameter %in% c('Fecal coliforms', 'Total Coliforms', 'Enterococcus', 'E. coli'),  #Unit Converion:  453592 mg in a pound, 1 cubic foot is 62.43 pounds, 43560 cf in an acre-foot, 28.3168 Liters in one cubic-ft, 1233481.8511532 L in one acre-foot
+    PL_M = ifelse(Parameter %in% c('Fecal coliforms', 'Total Coliforms', 'Enterococcus', 'E. coli'),  #Unit Converion:  453592 mg in a pound, 1 cubic foot is 62.43 pounds, 43560 cf in an acre-foot, 28.3168 Liters in one cubic-ft, 1233481.8511532 L in one acre-foot
                        (Avg_Load_Annual) * 1233481.8511532 * 10,  
                        ifelse(Units == 'mg/L',  #loading in pounds#
                               (Avg_Load_Annual) *  (1/453592) * (1233481.8511532),  
@@ -576,22 +500,28 @@ stn_load <- stn_load2 %>%
                                      )
                               )
                        )
-    )
-  )  #ignore columns with each parameter
+    ))
+   
+
+
+#ignore columns with each parameter
 str(stn_load)
 
 # Annual loading for print
 stn_load_print<-stn_load %>% 
-  select(Station, Parameter, Fraction, `Stormflow Volume -cf`,`Stormwater Volume (acre-ft)_RC_M`, RC_M, RC_CF,  RC_WMA, RC_WMAcf, RC_Group, PL_Actual) %>% 
+  select(Station, Parameter, Fraction, `Stormflow Volume -cf`,`Stormwater Volume (acre-ft)_RC_M`, RC_M, RC_CF,  RC_WMA, RC_WMAcf, RC_Group, PL_M) %>% 
   distinct() %>% 
-  spread(Parameter, PL_Actual) %>%
+  spread(Parameter, PL_M) %>%
   right_join(
     EMCRainTot2,
     .,
-    by = c('Station', 'Fraction')
+    by = c('Station', 'Fraction', 'Stormflow Volume -cf')
   ) 
   #filter(SampleType=="NA") %>%
   #write_csv(., paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/stn_load_print.csv'))
+
+
+
 
   write_csv(stn_load_print, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/stn_load_print.csv'))
   
@@ -634,12 +564,12 @@ stn_emc <- emc %>%
 # EMC modeled for outfall
 # Using modeled RC (RC_M) for v2 only
 
-stn_RC_n <-stn_RC_202021b %>%
+stn_RC_n <-stn_RC_202122b %>%
   select(Station, RC_M) %>%
   distinct(Station, RC_M, .keep_all = TRUE)
 
 EMC_M <-  #The EMC for each sampled outfall is calculated by area weighting each land use category EMC in each outfall tributary 
-  left_join(stn_RC_n,landuse_lspc_trib_2021, by = c("Station" = "FACILITYID")) %>% 
+  left_join(stn_RC_n,landuse_lspc_trib_2022, by = c("Station" = "FACILITYID")) %>% 
  
     select(AREA, EMC_Group, Station, RC_M, RC, LSPC_LU_CODE) %>% 
   group_by(Station, EMC_Group) %>% 
@@ -730,11 +660,11 @@ write_csv(EMC_WMA, path = here('A.2 Outfall Assessments/WetWeatherLoadingCalcs/O
 
 # WMA Stormwater Volume (acre-ft)s per jurisdiction  stormwater volume by EMC_Group
 # Combine jurisdicton land use with  rc and sbpat emc categories and run-off coefficient  #shows Jurisdiciton, EMC_Group_Area, RC_Group
-juris_loada <-landuse_lspc_juris_2021 %>%
-  group_by(JURISDICTI, EMC_Group, RC) %>%   #LSPC_LU_CODE brings in additional codes for an EMC_Group
-  summarise(EMC_Group_Area = sum(LUarea)) %>%
+juris_loada <-landuse_lspc_juris_2022 %>%
+  group_by(jurisdicti, EMC_Group, RC) %>%   #LSPC_LU_CODE brings in additional codes for an EMC_Group
+  summarise(EMC_Group_Area = sum(acres)) %>%
    mutate(
-    Area_Rainfall = 6.06, #update every year avg from cooperative obs stations
+    Area_Rainfall = 6.7, #average of rainfall event days >0.1" update every year avg from cooperative obs stations
     Juris_LU_Volume = EMC_Group_Area * RC * (Area_Rainfall / 12)  #all-modeled  ##copy and paste output below to notepad and open in Excel - data-frame not being created
   ) %>%
   ungroup()
@@ -742,19 +672,19 @@ juris_loada <-landuse_lspc_juris_2021 %>%
 write_excel_csv(juris_loada, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/juris_loada.csv'), na = '')
   
 juris_volume <- juris_loada  %>% 
-  group_by(JURISDICTI) %>% 
+  group_by(jurisdicti) %>% 
   summarise(
     `Stormwater Volume (acre-ft)` = sum(Juris_LU_Volume)
   ) %>% 
   filter(
-    JURISDICTI != 'IRVINE',
-    JURISDICTI != 'NEWPORT BEACH')
+    jurisdicti != 'IRVINE',
+    jurisdicti != 'NEWPORT BEACH')
 
 # WMA pollutant load per jurisdiction  #Unit Converion:  453592 mg in a pound, 1 cubic foot is 62.43 pounds, 43560 cf in an acre-foot, 28.3168 Liters in one cubic-ft, 1233481.8511532 L in one acre-foot
 juris_load <- juris_loada %>% 
   filter(
-    JURISDICTI != 'IRVINE',
-    JURISDICTI != 'NEWPORT BEACH') %>%
+    jurisdicti != 'IRVINE',
+    jurisdicti != 'NEWPORT BEACH') %>%
   full_join(., juris_volume) %>%
   
   left_join(
@@ -765,35 +695,27 @@ juris_load <- juris_loada %>%
     LU_Load = EMC_WMA_LU * Juris_LU_Volume
   ) %>% 
   mutate(
-    PL_Actual = ifelse(Constituent %in% c('Fecal coliforms'),
+    PL_M = ifelse(Constituent %in% c('Fecal coliforms'),
                        (LU_Load) * 1233481.8511532 * 10,
                        ifelse(Units == 'mg/L',
                               (LU_Load) * (1/453592) * (1233481.8511532),
-                              ifelse(Units == 'ug/L',
-                                     (LU_Load) * (1/10^6) * (1/453592) * (1233481.8511532),
-                                     ifelse(Units == 'ng/L',
-                                            (LU_Load) * (1/10^9) * (1/453592) * (1233481.8511532),
                                             NA
                                      )
                               )
                        )
-    )
-  )
-
+ 
 write_excel_csv(juris_load, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/juris_load.csv'), na = '')
 
 
 # WMA pollutant load per tributary  #Unit Converion:  453592 mg in a pound, 1 cubic foot is 62.43 pounds, 43560 cf in an acre-foot, 28.3168 Liters in one cubic-ft, 1233481.8511532 L in one acre-foot
  
-landuse_lspc_stn_area<-landuse_lspc_trib_2021 %>%  #see line 235 
+landuse_lspc_stn_area<-landuse_lspc_trib_2022 %>%  #see line 235 
   group_by(FACILITYID, EMC_Group, RC) %>%   #LSPC_LU_CODE brings in additional codes for an EMC_Group
   summarise(EMC_Group_Area = sum(AREA)) %>%
   mutate(
-    Area_Rainfall = 6, #average of co-operative gages
+    Area_Rainfall = 6.7, #average of co-operative gages
     Trib_LU_Volume = EMC_Group_Area * RC * (Area_Rainfall / 12)  #all-modeled  ##copy and paste output below to notepad and open in Excel - data-frame not being created
   )
-
-
 
 
 Trib_LU_Volume <- landuse_lspc_stn_area %>% 
@@ -812,25 +734,18 @@ trib_load <- landuse_lspc_stn_area %>%
     LU_Load = EMC_WMA_LU * Trib_LU_Volume
   ) %>% 
   mutate(
-    PL_Actual = ifelse(Constituent %in% c('Fecal coliforms'),
+    PL_M = ifelse(Constituent %in% c('Fecal coliforms'),
                        (LU_Load) * 1233481.8511532 * 10,
                        ifelse(Units == 'mg/L',
                               (LU_Load) * (1/453592) * (1233481.8511532),
-                              ifelse(Units == 'ug/L',
-                                     (LU_Load) * (1/10^6) * (1/453592) * (1233481.8511532),
-                                     ifelse(Units == 'ng/L',
-                                            (LU_Load) * (1/10^9) * (1/453592) * (1233481.8511532),
                                             NA
                                      )
                               )
-                       )
-    )
-  ) %>%
-  
+                       ) %>%
 select(-EMC_WMA_LU,-LU_Load) %>%
 
 unite(Constituent, Constituent:Units, sep =' - ') %>%  
-  spread(Constituent, PL_Actual)
+  spread(Constituent, PL_M)
 
 write_csv(trib_load, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/TribLoadsLU_Geosyntec.csv'))
 
@@ -840,9 +755,9 @@ write_csv(trib_load, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoading
 jurisformat<-     #shows distinct EMC_Group and RC_Group and JURISDICTI
   merge(   
   (sbpat_landuse_Geosyntec  %>% select(EMC_Group, RC_Group)),
-  (landuse_lspc_juris_2021 %>% ungroup() %>% select(JURISDICTI) %>% distinct(JURISDICTI)) 
+  (landuse_lspc_juris_2022 %>% ungroup() %>% select(jurisdicti) %>% distinct(jurisdicti)) 
 )  %>%
- distinct(JURISDICTI, EMC_Group, RC_Group)
+ distinct(jurisdicti, EMC_Group, RC_Group)
 
 
 jurisformat2<-    #joins to runoff coefficients
@@ -859,32 +774,32 @@ left_join(
       jurisformat2,
       (juris_load %>% 
          ungroup() %>% 
-         select(JURISDICTI, EMC_Group, RC, EMC_Group_Area, Juris_LU_Volume))
+         select(jurisdicti, EMC_Group, RC, EMC_Group_Area, Juris_LU_Volume))
     ) 
 
 jurisformat3<-
   distinct(jurisformat3, EMC_Group_Area, .keep_all=TRUE )  %>%
   filter(
-    JURISDICTI != 'IRVINE',
-    JURISDICTI != 'NEWPORT BEACH')
+    jurisdicti != 'IRVINE',
+    jurisdicti != 'NEWPORT BEACH')
 
 jurisformat4<-  #joins to loads
   left_join(
     jurisformat3, 
     juris_load) %>%
-  select(JURISDICTI, EMC_Group, RC, EMC_Group_Area, RC_Group, Constituent, Fraction, Units,Juris_LU_Volume, PL_Actual) %>%
+  select(jurisdicti, EMC_Group, RC, EMC_Group_Area, RC_Group, Constituent, Fraction, Units,Juris_LU_Volume, PL_M) %>%
   filter(
-    JURISDICTI != 'IRVINE',
-    JURISDICTI != 'NEWPORT BEACH') %>%
+    jurisdicti != 'IRVINE',
+    jurisdicti != 'NEWPORT BEACH') %>%
   filter(!is.na(Constituent)) %>%
   filter(!is.na(Fraction)) %>%
   filter(!is.na(Units)) %>%
-  filter(!is.na(PL_Actual))
+  filter(!is.na(PL_M))
    
   
 jurisformat5<- jurisformat4 %>%            
        unite(Parameter, Constituent:Units, sep =' - ') %>%  
-       spread(Parameter, PL_Actual) 
+       spread(Parameter, PL_M) 
   write_csv(jurisformat5, paste0(getwd(), '/A.2 Outfall Assessments/WetWeatherLoadingCalcs/Output/JurisLoadsLU.csv'))  #units are in pounds, not mg/L
   
   
@@ -926,7 +841,7 @@ jurisformat5<- jurisformat4 %>%
   
   
 ## landuse areas by outfall and by jurisdiction - EMC_Group Areas aren't equivalent by jurisdiction and by outfall
-landuse_lspc_stn_202021 %>% 
+landuse_lspc_stn_202122 %>% 
   group_by(EMC_Group) %>% 
   summarise(Sum = sum(SUM_Area_ACRES.y))
 

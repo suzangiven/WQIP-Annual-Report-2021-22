@@ -4,7 +4,7 @@ source('A.2 Outfall Assessments/DryWeatherLoadingCalcs/1projectsetup.R')
 
 getwd()
 
-Rain_Daily <-"A.2 Outfall Assessments/DryWeatherLoadingCalcs/Input/Rain/Rain_SOCWMA_COOP_2021-22.CSV"
+Rain_Daily <-"A.2 Outfall Assessments/DryWeatherLoadingCalcs/Input/Rain/Rain_SOCWMA_COOP_2015_2022.CSV"
 
 Rain_Daily<-read.csv(Rain_Daily)
 
@@ -94,7 +94,8 @@ saveRDS(dry_new, file = here('A.2 Outfall Assessments/DryWeatherLoadingCalcs/Out
 #recreate file in ArcGIS so it is updated with any station changes (Use Near Table Geoprocessing)
 stn_near <-"A.2 Outfall Assessments/DryWeatherLoadingCalcs/Input/Rain/outfall_near_rain_gage.csv"
 
-stn_near <- read.csv(stn_near)
+stn_near <- read.csv(stn_near) %>%
+
 
 values <- list()
 values[['dry_new']]         <- 'A.2 Outfall Assessments/DryWeatherLoadingCalcs/Output/dry_new.rds'

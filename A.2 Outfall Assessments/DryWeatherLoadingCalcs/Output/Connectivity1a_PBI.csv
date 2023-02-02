@@ -1,0 +1,698 @@
+FACILITYID,Date,FlowConnectivity,Plot Connectivitity
+DP01-12022-1,7/12/2022,Direct Connection,Direct Connection
+DP01-12022-1,9/26/2022,Direct Connection,Direct Connection
+DP01-12022-2,7/12/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+DP01-12022-2,9/26/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+DP04-12015-1,7/5/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+DP04-12015-1,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+DP06-12106-1,7/12/2022,Partial - Significant Distance,Partial - Significant Distance
+DP06-12106-1,9/26/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+I00-11437-1,6/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I00-11437-1,9/7/2022,Undetermined,None - Flow Infiltrates or Outfall is Dry
+I00-11453-1,7/5/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I00-11453-1,8/16/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I00-11468-1,6/21/2022,Direct Connection,Direct Connection
+I00-11468-1,9/7/2022,Direct Connection,Direct Connection
+I00-11518-1,7/5/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I00-11518-1,8/16/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I00-11518-2,7/5/2022,Direct Connection,Direct Connection
+I00-11518-2,8/16/2022,NA,Direct Connection
+I01-11010-1,6/21/2022,Direct Connection,Direct Connection
+I01-11010-1,9/7/2022,Direct Connection,Direct Connection
+I01-11015-2,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11015-2,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11015-3,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11015-3,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11023-1,6/21/2022,Direct Connection,Direct Connection
+I01-11023-1,9/7/2022,Direct Connection,Direct Connection
+I01-11023-1,9/1/2022,NA,Direct Connection
+I01-11023-2,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11023-2,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11023-3,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11023-3,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11023-4,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11023-4,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11023-5,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11023-5,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11059-1,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11059-1,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11059-2,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11059-2,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11059-3,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11059-3,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11065-1,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11065-1,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11077-1,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11077-1,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11077-2,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11077-2,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11093-1,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11093-1,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11093-2,7/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11093-2,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11195-2,NA,NA,Undetermined
+I01-11216-1 (I02P13),6/28/2022,Undetermined,Undetermined
+I01-11216-1 (I02P13),9/14/2022,Undetermined,Undetermined
+I01-11216-2 (I02P12),9/14/2022,Undetermined,Undetermined
+I01-11216-2 (I02P12),6/28/2022,NA,Undetermined
+I01-11216-3,6/28/2022,Undetermined,Undetermined
+I01-11216-3,9/14/2022,Undetermined,Undetermined
+I01-11216-4 (I02P14),6/28/2022,Undetermined,Undetermined
+I01-11216-4 (I02P14),9/14/2022,Undetermined,Undetermined
+I01-11217-1,6/28/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11217-1,9/14/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11343-1,6/14/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+I01-11343-1,8/23/2022,Undetermined,None - Flow Infiltrates or Outfall is Dry
+I01-11343-2 (I02P18),6/14/2022,Undetermined,Undetermined
+I01-11343-2 (I02P18),8/23/2022,Undetermined,Undetermined
+I01-11487-1,7/5/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+I01-11487-1,8/16/2022,Partial - Significant Distance,Partial - Significant Distance
+I01-11487-2,7/5/2022,Partial - Significant Distance,Partial - Significant Distance
+I01-11487-2,8/16/2022,Partial - Significant Distance,Partial - Significant Distance
+I01-11502-1,NA,NA,Undetermined
+I01-11503-3,6/28/2022,Partial - Significant Distance,Partial - Significant Distance
+I01-11503-3,9/14/2022,Partial - Significant Distance,Partial - Significant Distance
+I01-11503-5,6/28/2022,Direct Connection,Direct Connection
+I01-11503-5,9/14/2022,Direct Connection,Direct Connection
+J01-10004-1 (J01P01),6/21/2022,Direct Connection,Direct Connection
+J01-10004-1 (J01P01),6/30/2022,Direct Connection,Direct Connection
+J01-10004-1 (J01P01),8/18/2022,Direct Connection,Direct Connection
+J01-10004-2,6/21/2022,Partial - Significant Distance,Partial - Significant Distance
+J01-10004-2,8/18/2022,Partial - Significant Distance,Partial - Significant Distance
+J01-10006-1,6/21/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+J01-10006-1,8/9/2022,Direct Connection,Partial - Significant Distance
+J01-10012-3,NA,NA,Undetermined
+J01-10017-1 (J01TBN4),6/28/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+J01-10017-1 (J01TBN4),7/13/2022,Direct Connection,Partial - Significant Distance
+J01-10019-1 (J01P33),7/13/2022,Direct Connection,Direct Connection
+J01-10019-1 (J01P33),9/14/2022,Undetermined,Direct Connection
+J01-10041-2 (J03P13),6/28/2022,Partial - Significant Distance,Partial - Significant Distance
+J01-9005-1 (J03P05),7/8/2022,Direct Connection,Direct Connection
+J01-9005-3,7/8/2022,Direct Connection,Direct Connection
+J01-9007-1 (J02P05),6/23/2022,Undetermined,Undetermined
+J01-9007-1 (J02P05),7/13/2022,Unsafe to Access,Undetermined
+J01-9007-1 (J02P05),9/8/2022,Undetermined,Undetermined
+J01-9008-1 (J01P30),6/28/2022,Direct Connection,Direct Connection
+J01-9008-1 (J01P30),7/1/2022,Direct Connection,Direct Connection
+J01-9031-1,6/21/2022,Partial - Significant Distance,Partial - Significant Distance
+J01-9031-1,8/18/2022,Partial - Significant Distance,Partial - Significant Distance
+J01-9033-1,NA,NA,Undetermined
+J01-9040-1,4/7/2022,Direct Connection,Direct Connection
+J01-9040-1,4/14/2022,Direct Connection,Direct Connection
+J01-9040-1,4/21/2022,Direct Connection,Direct Connection
+J01-9040-1,5/12/2022,Direct Connection,Direct Connection
+J01-9040-1,5/19/2022,None - Flow Infiltrates or Outfall is Dry,Direct Connection
+J01-9046-1,6/21/2022,Direct Connection,Direct Connection
+J01-9046-1,6/30/2022,None - Flow Infiltrates or Outfall is Dry,Direct Connection
+J01-9046-1,8/18/2022,Direct Connection,Direct Connection
+J01-9046-2,6/21/2022,Direct Connection,Direct Connection
+J01-9046-2,6/30/2022,Direct Connection,Direct Connection
+J01-9046-2,8/18/2022,Direct Connection,Direct Connection
+J01-9046-3,NA,NA,Undetermined
+J01-9066-1 (J01P04),6/21/2022,Direct Connection,Direct Connection
+J01-9066-1 (J01P04),7/1/2022,Direct Connection,Direct Connection
+J01-9066-1 (J01P04),8/9/2022,Direct Connection,Direct Connection
+J01-9066-2 (J01P03),6/21/2022,Direct Connection,Direct Connection
+J01-9066-2 (J01P03),7/1/2022,Direct Connection,Direct Connection
+J01-9066-2 (J01P03),8/9/2022,Direct Connection,Direct Connection
+J01-9082-2,6/23/2022,Direct Connection,Direct Connection
+J01-9082-2,7/13/2022,Direct Connection,Direct Connection
+J01-9082-2,8/22/2022,Direct Connection,Direct Connection
+J01-9082-3,6/23/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9082-3,7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9082-3,8/22/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9082-4,6/23/2022,Direct Connection,Direct Connection
+J01-9082-4,7/13/2022,Direct Connection,Direct Connection
+J01-9082-4,8/22/2022,Direct Connection,Direct Connection
+J01-9131-1 (J01P28),6/23/2022,Direct Connection,Direct Connection
+J01-9131-1 (J01P28),7/1/2022,None - Flow Infiltrates or Outfall is Dry,Direct Connection
+J01-9131-1 (J01P28),9/8/2022,Direct Connection,Direct Connection
+J01-9144-1 (J01P23),6/28/2022,Direct Connection,Direct Connection
+J01-9144-1 (J01P23),7/13/2022,Direct Connection,Direct Connection
+J01-9144-4 (J01P26),7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9144-4 (J01P26),8/31/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9224-1 (J01P24),6/15/2022,Direct Connection,Direct Connection
+J01-9224-1 (J01P24),7/13/2022,Direct Connection,Direct Connection
+J01-9224-1 (J01P24),8/18/2022,Direct Connection,Direct Connection
+J01-9224-1 (J01P24),8/10/2022,NA,Undetermined
+J01-9224-2 (J01P25),6/15/2022,Direct Connection,Direct Connection
+J01-9224-2 (J01P25),7/13/2022,Direct Connection,Direct Connection
+J01-9224-2 (J01P25),8/18/2022,Direct Connection,Direct Connection
+J01-9259-3,6/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9259-3,8/9/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9264-1 (J01P06),6/30/2022,Partial - Significant Distance,Partial - Significant Distance
+J01-9264-1 (J01P06),9/21/2022,Partial - Significant Distance,Partial - Significant Distance
+J01-9273-1,6/14/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9273-1,7/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9273-1,8/23/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9275-1,NA,NA,Undetermined
+J01-9275-2,6/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9275-2,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9313-1,NA,NA,Undetermined
+J01-9349-1,6/21/2022,Direct Connection,Direct Connection
+J01-9349-1,6/30/2022,None - Flow Infiltrates or Outfall is Dry,Direct Connection
+J01-9349-1,8/18/2022,Direct Connection,Direct Connection
+J01-9364-3 (J01P21),6/28/2022,Direct Connection,Direct Connection
+J01-9364-3 (J01P21),7/8/2022,Direct Connection,Direct Connection
+J01-9364-4,6/28/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9364-4,8/29/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9377-1,6/21/2022,Direct Connection,Direct Connection
+J01-9377-1,6/30/2022,None - Flow Infiltrates or Outfall is Dry,Direct Connection
+J01-9377-1,8/18/2022,Direct Connection,Direct Connection
+J01-9377-2 (J01TBN8),6/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9377-2 (J01TBN8),9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J01-9782-1 (J01TBN3),6/21/2022,Direct Connection,Direct Connection
+J01-9782-1 (J01TBN3),8/18/2022,Direct Connection,Direct Connection
+J01-9785-1,8/1/2022,Direct Connection,Direct Connection
+J01-9785-1,9/14/2022,Direct Connection,Direct Connection
+J01-9992-1 (J01P27),6/23/2022,Direct Connection,Direct Connection
+J01-9992-1 (J01P27),7/1/2022,Direct Connection,Direct Connection
+J01-9992-1 (J01P27),9/8/2022,Direct Connection,Direct Connection
+J03-9215-1,6/23/2022,Direct Connection,Direct Connection
+J03-9215-1,8/4/2022,Direct Connection,Direct Connection
+J03-9215-3,6/23/2022,Direct Connection,Direct Connection
+J03-9215-3,7/8/2022,Direct Connection,Direct Connection
+J03-9215-3,8/4/2022,Direct Connection,Direct Connection
+J03-9216-1 (J03P01),7/6/2022,Direct Connection,Direct Connection
+J03-9216-1 (J03P01),7/8/2022,Direct Connection,Direct Connection
+J03-9216-1 (J03P01),8/4/2022,Direct Connection,Direct Connection
+J03-9216-2,8/4/2022,Partial - Significant Distance,Partial - Significant Distance
+J03-9216-2,8/8/2022,Partial - Significant Distance,Partial - Significant Distance
+J03-9216-5,8/4/2022,Partial - Significant Distance,Partial - Significant Distance
+J03-9221-1 (J03P02),6/15/2022,Undetermined,Undetermined
+J03-9221-1 (J03P02),7/8/2022,Unsafe to Access,Undetermined
+J03-9221-1 (J03P02),8/18/2022,Undetermined,Undetermined
+J03-9234-5,7/6/2022,Direct Connection,Direct Connection
+J03-9234-5,8/31/2022,NA,Direct Connection
+J03-9234-6,7/6/2022,Partial - Significant Distance,Partial - Significant Distance
+J03-9234-6,7/8/2022,Partial - Significant Distance,Partial - Significant Distance
+J03-9234-6,8/31/2022,Partial - Significant Distance,Partial - Significant Distance
+J03-9234-8,7/6/2022,Partial - Significant Distance,Partial - Significant Distance
+J03-9234-8,8/31/2022,Partial - Significant Distance,Partial - Significant Distance
+J03-9368-1 (J03TBN1),6/23/2022,Direct Connection,Direct Connection
+J03-9368-1 (J03TBN1),7/8/2022,Direct Connection,Direct Connection
+J03-9368-1 (J03TBN1),8/4/2022,Direct Connection,Direct Connection
+J03-9368-2 (J03TBN2),6/23/2022,Direct Connection,Direct Connection
+J03-9368-2 (J03TBN2),7/6/2022,Direct Connection,Direct Connection
+J03-9368-2 (J03TBN2),7/8/2022,Direct Connection,Direct Connection
+J03-9368-2 (J03TBN2),8/4/2022,Direct Connection,Direct Connection
+J04-9249-1,7/8/2022,Direct Connection,Direct Connection
+J05-9255-1 (J05P01),8/2/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J05-9255-1 (J05P01),9/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J05-9271-6,8/2/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J05-9271-6,9/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J05-9800-2,7/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J05-9800-2,9/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+J06-10011-1 (J06P01),6/23/2022,Direct Connection,Direct Connection
+J06-10011-1 (J06P01),7/13/2022,Direct Connection,Direct Connection
+J06-10011-1 (J06P01),8/22/2022,Direct Connection,Direct Connection
+J06-9079-1 (J06P03),6/23/2022,Direct Connection,Direct Connection
+J06-9079-1 (J06P03),7/13/2022,Direct Connection,Direct Connection
+J06-9079-1 (J06P03),8/22/2022,Direct Connection,Direct Connection
+J07-9022-1,6/21/2022,Direct Connection,Direct Connection
+J07-9022-1,8/9/2022,Partial - Significant Distance,Direct Connection
+J07-9022-6,6/21/2022,Partial - Significant Distance,Partial - Significant Distance
+J07-9022-6,8/9/2022,Partial - Significant Distance,Partial - Significant Distance
+J07-9109-1,6/21/2022,Partial - Significant Distance,Partial - Significant Distance
+J07-9109-1,8/9/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+J07-9109-2,6/21/2022,Partial - Significant Distance,Partial - Significant Distance
+J07-9109-2,8/9/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+J07-9109-4 (J07P02),6/21/2022,Partial - Significant Distance,Partial - Significant Distance
+J07-9109-4 (J07P02),6/30/2022,Partial - Significant Distance,Partial - Significant Distance
+J07-9109-4 (J07P02),8/9/2022,Partial - Significant Distance,Partial - Significant Distance
+J07-9110-1,6/21/2022,Partial - Significant Distance,Partial - Significant Distance
+J07-9110-2,6/21/2022,Direct Connection,Direct Connection
+J07-9110-2,6/30/2022,Direct Connection,Direct Connection
+J07-9110-2,8/9/2022,Direct Connection,Direct Connection
+J07-9110-3,6/21/2022,Partial - Significant Distance,Partial - Significant Distance
+J07-9110-3,6/30/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+J07-9110-3,8/9/2022,Direct Connection,Partial - Significant Distance
+K01-12032-2 (K01P11),7/6/2022,Partial - Significant Distance,Partial - Significant Distance
+K01-12032-2 (K01P11),8/31/2022,Partial - Significant Distance,Partial - Significant Distance
+K01-12036-1,7/6/2022,Undetermined,Undetermined
+K01-12036-1,8/31/2022,Undetermined,Undetermined
+K01-12036-10,7/6/2022,None - Flow Infiltrates or Outfall is Dry,Undetermined
+K01-12036-10,8/31/2022,Undetermined,Undetermined
+K01-12036-5,7/6/2022,Undetermined,Undetermined
+K01-12036-5,8/31/2022,Undetermined,Undetermined
+K01-12058-1 (K01P08),8/2/2022,Direct Connection,Direct Connection
+K01-12058-2 (K01P09),8/2/2022,Direct Connection,Direct Connection
+K01-12062-1,8/2/2022,Direct Connection,Direct Connection
+K01-12126-1 (K01S01),6/22/2022,Direct Connection,Direct Connection
+K01-12138-1 (K01TBN1),8/2/2022,Undetermined,Undetermined
+K01-12155-1,7/6/2022,Undetermined,Undetermined
+K01-12155-1,8/31/2022,None - Flow Infiltrates or Outfall is Dry,Undetermined
+K01-12155-5,7/6/2022,Undetermined,Undetermined
+K01-12155-5,8/31/2022,Undetermined,Undetermined
+K01-12156-1,NA,NA,Undetermined
+K01-12156-3,NA,NA,Undetermined
+K01-12156-6,7/20/2022,Direct Connection,Direct Connection
+K01-12156-6,8/18/2022,Direct Connection,Direct Connection
+K01-12159-2,6/22/2022,Direct Connection,Direct Connection
+K01-12159-3,6/22/2022,Direct Connection,Direct Connection
+K01-12177-1 (K01P07),6/15/2022,Undetermined,Undetermined
+K01-12177-1 (K01P07),8/18/2022,Undetermined,Undetermined
+L01-125-1,7/28/2022,Undetermined,Undetermined
+L01-125-1,9/20/2022,Undetermined,Undetermined
+L01-125-2,7/28/2022,Undetermined,Undetermined
+L01-125-2,9/20/2022,Undetermined,Undetermined
+L01-125-3,7/28/2022,Undetermined,Undetermined
+L01-125-3,9/20/2022,Undetermined,Undetermined
+L01-218-1,NA,NA,Undetermined
+L01-218-2,NA,NA,Undetermined
+L01-218-3,7/26/2022,Undetermined,Undetermined
+L01-218-4,7/26/2022,Partial - Significant Distance,Partial - Significant Distance
+L01-223-1 (L08TBN1),6/27/2022,Undetermined,Undetermined
+L01-223-1 (L08TBN1),8/25/2022,Undetermined,Undetermined
+L01-242-1 (L07P16),8/8/2022,Direct Connection,Direct Connection
+L01-242-1 (L07P16),9/19/2022,Direct Connection,Direct Connection
+L01-261-1,NA,NA,Undetermined
+L01-303-1,NA,NA,Undetermined
+L01-303-2,8/8/2022,Direct Connection,Direct Connection
+L01-303-2,9/19/2022,Direct Connection,Direct Connection
+L01-303-3,8/1/2022,Partial - Significant Distance,Partial - Significant Distance
+L01-303-3,9/26/2022,Partial - Significant Distance,Partial - Significant Distance
+L01-303-4,8/1/2022,Direct Connection,Direct Connection
+L01-303-4,9/26/2022,Direct Connection,Direct Connection
+L01-303-5,NA,NA,Undetermined
+L01-335-1,6/17/2022,Direct Connection,Direct Connection
+L01-335-1,9/27/2022,Direct Connection,Direct Connection
+L01-335-2,6/17/2022,Direct Connection,Partial - Significant Distance
+L01-335-2,9/27/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L01-340-1,6/16/2022,Undetermined,Undetermined
+L01-340-1,8/24/2022,Undetermined,Undetermined
+L01-372-1,NA,NA,Undetermined
+L01-391-1,8/1/2022,Direct Connection,Direct Connection
+L01-391-1,9/19/2022,Direct Connection,Direct Connection
+L01-391-3,8/1/2022,Direct Connection,Direct Connection
+L01-391-3,9/19/2022,Direct Connection,Direct Connection
+L01-399-1,NA,NA,Undetermined
+L01-399-2,NA,NA,Undetermined
+L01-404-1,6/16/2022,Undetermined,Undetermined
+L01-404-1,8/24/2022,Undetermined,Undetermined
+L01-404-2,6/16/2022,Undetermined,Undetermined
+L01-404-2,8/24/2022,Undetermined,Undetermined
+L01-414-1,9/19/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-414-1,7/21/2022,NA,None - Flow Infiltrates or Outfall is Dry
+L01-414-2,8/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-414-2,9/19/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-414-3,6/16/2022,None - Flow Infiltrates or Outfall is Dry,Undetermined
+L01-414-3,8/24/2022,Undetermined,Undetermined
+L01-458-1,5/31/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-458-1,9/27/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-471-1,5/31/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-471-1,9/27/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-494-1,5/31/2022,Undetermined,None - Flow Infiltrates or Outfall is Dry
+L01-494-1,9/27/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-514-1,6/17/2022,Undetermined,Undetermined
+L01-514-1,9/23/2022,Undetermined,Undetermined
+L01-517-1,NA,NA,Undetermined
+L01-517-2,NA,NA,Undetermined
+L01-517-3,5/31/2022,Undetermined,None - Flow Infiltrates or Outfall is Dry
+L01-517-3,9/27/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-517-6,5/31/2022,Undetermined,Undetermined
+L01-517-6,9/27/2022,Undetermined,Undetermined
+L01-517-7,5/31/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-517-7,9/27/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-517-8,NA,NA,Undetermined
+L01-556-1,7/28/2022,Undetermined,Undetermined
+L01-556-1,8/10/2022,Undetermined,Undetermined
+L01-601-1,6/28/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-601-1,9/14/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-602-2,8/10/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-613-1,NA,NA,Undetermined
+L01-618-1,7/28/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-618-1,8/10/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-618-2,7/13/2022,Undetermined,Undetermined
+L01-618-2,8/10/2022,Undetermined,Undetermined
+L01-618-3,8/10/2022,Undetermined,Undetermined
+L01-618-4,7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-618-4,8/10/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-618-5 (L01S09),7/13/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L01-618-5 (L01S09),8/10/2022,Direct Connection,Partial - Significant Distance
+L01-724-1 (L01S01),6/22/2022,Partial - Significant Distance,Partial - Significant Distance
+L01-724-2,NA,NA,Undetermined
+L01-724-4 (L01P03),6/22/2022,Direct Connection,Direct Connection
+L01-724-4 (L01P03),9/6/2022,Direct Connection,Direct Connection
+L01-726-2,7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-726-2,8/29/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-726-3,7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-726-3,8/29/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-726-5,6/22/2022,Direct Connection,Direct Connection
+L01-726-5,8/29/2022,Direct Connection,Direct Connection
+L01-726-6,7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-726-6,8/29/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-726-7,7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-726-7,8/29/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-726-8,6/28/2022,Partial - Significant Distance,Partial - Significant Distance
+L01-726-8,9/14/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L01-726-9,6/28/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-726-9,9/14/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-727-1 (L01S04),7/12/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-727-1 (L01S04),8/29/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-727-2,7/12/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-727-2,8/29/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-727-3,7/12/2022,Direct Connection,Partial - Significant Distance
+L01-727-3,9/14/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L01-728-2,7/12/2022,Direct Connection,Partial - Significant Distance
+L01-728-2,8/29/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L01-728-3 (L01S02),7/12/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L01-728-3 (L01S02),8/29/2022,Direct Connection,Partial - Significant Distance
+L01-728-4,7/12/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-728-4,9/14/2022,NA,None - Flow Infiltrates or Outfall is Dry
+L01-728-5 (L01-DP),6/22/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-728-6,7/12/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-728-6,8/29/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-728-7 (L01S03),7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-728-7 (L01S03),9/28/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-728-8d,7/12/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-728-8d,9/23/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-728-9,7/12/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-728-9,8/29/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-730-1,7/28/2022,Direct Connection,Direct Connection
+L01-730-1,9/20/2022,Direct Connection,Direct Connection
+L01-731-1 (L08TBN2),6/27/2022,Undetermined,Undetermined
+L01-731-1 (L08TBN2),8/25/2022,Undetermined,Undetermined
+L01-733-2,8/1/2022,Direct Connection,Direct Connection
+L01-733-2,9/19/2022,Direct Connection,Direct Connection
+L01-733-4,8/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-733-4,9/19/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-733-5,8/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-733-5,9/19/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-733-7,9/19/2022,Direct Connection,Direct Connection
+L01-733-7,9/26/2022,Direct Connection,Direct Connection
+L01-747-1,7/28/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-747-1,8/10/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-747-2,7/28/2022,Undetermined,Partial - Significant Distance
+L01-747-2,8/10/2022,Partial - Significant Distance,Partial - Significant Distance
+L01-748-1,7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-748-1,8/10/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-748-2,7/13/2022,NA,Undetermined
+L01-748-2,8/10/2022,NA,Undetermined
+L01-749-2d,6/22/2022,Undetermined,Undetermined
+L01-749-2d,8/10/2022,Undetermined,Undetermined
+L01-749-2d,9/6/2022,Undetermined,Undetermined
+L01-749-2d,9/6/2022,Undetermined,Undetermined
+L01-749-3,7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-749-3,8/10/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-749-5,7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-749-5,8/11/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-760-1,8/1/2022,Undetermined,None - Flow Infiltrates or Outfall is Dry
+L01-760-1,8/24/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-760-2,8/1/2022,Undetermined,Undetermined
+L01-760-2,8/24/2022,Undetermined,Undetermined
+L01-766-2 (L01S06),7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-766-2 (L01S06),8/10/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-766-3,7/13/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L01-766-3,9/28/2022,Direct Connection,Partial - Significant Distance
+L01-766-4,7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-766-4,8/11/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-766-5,7/13/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-766-5,8/10/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-766-7,6/28/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-766-7,8/10/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-766-8,6/28/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-766-8,8/10/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L01-766-9,6/28/2022,Undetermined,Undetermined
+L01-766-9,9/6/2022,Undetermined,Undetermined
+L02-166-1 (L02PXX),7/27/2022,Undetermined,Undetermined
+L02-166-2 (L02P25),7/27/2022,Undetermined,Undetermined
+L02-166-2 (L02P25),9/20/2022,Undetermined,Undetermined
+L02-166-3 (L02P26),6/27/2022,Undetermined,Undetermined
+L02-166-3 (L02P26),8/25/2022,Undetermined,Undetermined
+L02-198-1 (L02P29),7/27/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L02-198-1 (L02P29),9/20/2022,Partial - Significant Distance,Partial - Significant Distance
+L02-204-1 (L02P45),7/27/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L02-204-1 (L02P45),9/20/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L02-246-1 (L11P01),6/27/2022,Direct Connection,Direct Connection
+L02-246-1 (L11P01),8/25/2022,Direct Connection,Direct Connection
+L02-344-1,7/26/2022,Undetermined,None - Flow Infiltrates or Outfall is Dry
+L02-344-1,9/19/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L02-344-2,7/26/2022,Undetermined,Undetermined
+L02-344-2,9/19/2022,Undetermined,Undetermined
+L02-359-1 (L02P43),6/17/2022,Undetermined,Undetermined
+L02-359-1 (L02P43),9/26/2022,Undetermined,Undetermined
+L02-366-1 (MVL02P14),6/17/2022,Undetermined,Undetermined
+L02-366-1 (MVL02P14),9/1/2022,Partial - Significant Distance,Partial - Significant Distance
+L02-374-1 (L02P50),6/16/2022,Undetermined,Undetermined
+L02-374-1 (L02P50),9/6/2022,Undetermined,Undetermined
+L02-374-2 (MVL02P20),6/17/2022,Undetermined,Undetermined
+L02-374-2 (MVL02P20),9/26/2022,Undetermined,Undetermined
+L02-396-1,NA,NA,Undetermined
+L02-401-1,6/8/2022,Direct Connection,Direct Connection
+L02-401-1,9/19/2022,Direct Connection,Direct Connection
+L02-401-2 (COL02P55),6/16/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L02-401-2 (COL02P55),9/6/2022,Direct Connection,Partial - Significant Distance
+L02-502-1,7/6/2022,Undetermined,None - Flow Infiltrates or Outfall is Dry
+L02-502-1,8/11/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L02-502-5,7/6/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L02-502-5,8/11/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L02-502-6,8/11/2022,NA,Undetermined
+L02-541-2,6/28/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L02-541-2,9/14/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L02-541-6,6/28/2022,Direct Connection,Direct Connection
+L02-541-6,9/14/2022,Direct Connection,Direct Connection
+L02-541-7,6/28/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L02-541-7,9/14/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L02-541-9 (L02P02),6/22/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L02-541-9 (L02P02),8/11/2022,Undetermined,None - Flow Infiltrates or Outfall is Dry
+L02-571-1,NA,NA,Undetermined
+L02-571-3,7/20/2022,Direct Connection,Direct Connection
+L02-571-3,9/14/2022,Direct Connection,Direct Connection
+L02-571-5 (L02TBN2),6/28/2022,Direct Connection,Direct Connection
+L02-571-5 (L02TBN2),9/14/2022,Direct Connection,Direct Connection
+L02-622-1 (L02P28),7/27/2022,Undetermined,Undetermined
+L02-622-1 (L02P28),9/20/2022,Undetermined,Undetermined
+L02-622-2 (L02P32),NA,NA,Undetermined
+L02-640-1 (L11P02),NA,NA,Undetermined
+L02-641-1,6/27/2022,Direct Connection,Direct Connection
+L02-641-1,8/25/2022,Direct Connection,Direct Connection
+L02-641-2,6/27/2022,Direct Connection,Direct Connection
+L02-641-2,6/27/2022,Direct Connection,Direct Connection
+L02-641-2,8/25/2022,Direct Connection,Direct Connection
+L03-074-1 (L03B01),6/22/2022,Direct Connection,Direct Connection
+L03-074-1 (L03B01),8/9/2022,Direct Connection,Direct Connection
+L03-074-2,6/22/2022,NA,Undetermined
+L03-074-2,8/9/2022,NA,Undetermined
+L03-141-1,6/22/2022,Direct Connection,Direct Connection
+L03-141-1,8/9/2022,Direct Connection,Direct Connection
+L03-141-2,6/22/2022,Direct Connection,Direct Connection
+L03-141-2,8/9/2022,Direct Connection,Direct Connection
+L03-141-3,6/22/2022,Direct Connection,Direct Connection
+L03-141-3,8/9/2022,Direct Connection,Direct Connection
+L03-142-1 (L03P24),7/27/2022,Undetermined,Undetermined
+L03-142-1 (L03P24),9/1/2022,Undetermined,Undetermined
+L03-172-2,6/22/2022,NA,Undetermined
+L03-172-2,8/9/2022,NA,Undetermined
+L03-172-3,6/22/2022,NA,Undetermined
+L03-172-3,8/9/2022,NA,Undetermined
+L03-214-2 (L03P18),6/14/2022,Direct Connection,Direct Connection
+L03-214-2 (L03P18),8/23/2022,Direct Connection,Direct Connection
+L03-240-1 (L03P14),6/22/2022,Direct Connection,Direct Connection
+L03-240-1 (L03P14),8/9/2022,Direct Connection,Direct Connection
+L03-241-3,8/9/2022,Direct Connection,Direct Connection
+L03-241-4,6/22/2022,Direct Connection,Direct Connection
+L03-241-4,8/9/2022,Direct Connection,Direct Connection
+L03-316-1,8/2/2022,Direct Connection,Direct Connection
+L03-316-1,9/1/2022,Direct Connection,Direct Connection
+L03-316-2,6/22/2022,Direct Connection,Direct Connection
+L03-316-2,8/2/2022,Partial - Significant Distance,Partial - Significant Distance
+L03-316-2,9/1/2022,Partial - Significant Distance,Partial - Significant Distance
+L03-316-3 (L03P12),6/14/2022,Direct Connection,Direct Connection
+L03-316-3 (L03P12),8/23/2022,Direct Connection,Direct Connection
+L03-316-4,6/22/2022,Direct Connection,Direct Connection
+L03-316-4,9/1/2022,Partial - Significant Distance,Direct Connection
+L03-418-1,7/6/2022,Direct Connection,Direct Connection
+L03-418-1,9/21/2022,Direct Connection,Direct Connection
+L03-418-2,6/23/2022,Partial - Significant Distance,Partial - Significant Distance
+L03-418-2,8/4/2022,Partial - Significant Distance,Partial - Significant Distance
+L03-418-3,6/23/2022,Partial - Significant Distance,Partial - Significant Distance
+L03-418-3,8/4/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L03-418-8,6/15/2022,Direct Connection,Direct Connection
+L03-418-8,8/18/2022,Direct Connection,Direct Connection
+L03-455-2,7/6/2022,Direct Connection,Direct Connection
+L03-455-2,8/11/2022,Direct Connection,Direct Connection
+L03-455-3 (L03P37),7/6/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L03-455-3 (L03P37),8/11/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L03-455-4,7/6/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L03-455-4,8/11/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L03-455-5,7/6/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L03-455-5,9/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L03-455-6,7/6/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L03-455-6,9/21/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L03-455-7,7/6/2022,Direct Connection,Direct Connection
+L03-455-7,9/21/2022,Direct Connection,Direct Connection
+L03-497-1,NA,NA,Undetermined
+L03-662-3 (L03P16),6/14/2022,Partial - Significant Distance,Partial - Significant Distance
+L03-662-3 (L03P16),8/23/2022,Partial - Significant Distance,Partial - Significant Distance
+L03-691-1 (L03P09),7/6/2022,Partial - Significant Distance,Partial - Significant Distance
+L03-693-1 (L03P11),7/6/2022,Direct Connection,Direct Connection
+L03-693-1 (L03P11),8/23/2022,Direct Connection,Direct Connection
+L03-708-1,6/15/2022,Direct Connection,Direct Connection
+L03-708-1,6/15/2022,Direct Connection,Direct Connection
+L03-708-1,8/18/2022,Direct Connection,Direct Connection
+L03-708-11 (L03P05),6/23/2022,Direct Connection,Partial - Significant Distance
+L03-708-11 (L03P05),8/4/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L03-708-13,6/23/2022,Direct Connection,Direct Connection
+L03-708-13,8/4/2022,Direct Connection,Direct Connection
+L03-708-5,6/23/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L03-708-5,8/4/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L03-708-9,6/23/2022,Direct Connection,Direct Connection
+L03-708-9,8/4/2022,Direct Connection,Direct Connection
+L04-136-1u (L04P07),6/29/2022,Partial - Significant Distance,Partial - Significant Distance
+L04-136-1u (L04P07),8/23/2022,Partial - Significant Distance,Partial - Significant Distance
+L04-266-1,NA,NA,Undetermined
+L04-266-5,6/14/2022,Direct Connection,Direct Connection
+L04-266-5,8/23/2022,Direct Connection,Direct Connection
+L04-301-1 (L04P08),6/22/2022,NA,Undetermined
+L04-672-1,6/29/2022,Partial - Significant Distance,Partial - Significant Distance
+L04-672-1,6/29/2022,Partial - Significant Distance,Partial - Significant Distance
+L04-672-1,8/23/2022,Partial - Significant Distance,Partial - Significant Distance
+L04-702-1 (L04P02),8/2/2022,Direct Connection,Direct Connection
+L04-702-1 (L04P02),9/1/2022,Direct Connection,Direct Connection
+L04-702-4,8/2/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L04-702-4,9/1/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+L05-049-1,6/16/2022,Direct Connection,Direct Connection
+L05-049-1,9/6/2022,Direct Connection,Direct Connection
+L05-049-2,9/6/2022,Direct Connection,Direct Connection
+L05-489-3,6/16/2022,Direct Connection,Direct Connection
+L05-489-3,9/6/2022,Direct Connection,Direct Connection
+L05-489-3d,6/16/2022,Direct Connection,Direct Connection
+L05-489-3d,9/6/2022,Direct Connection,Direct Connection
+L05-489-4,6/16/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+L05-489-4,9/6/2022,Direct Connection,Partial - Significant Distance
+L05-489-7,6/16/2022,Direct Connection,Direct Connection
+L05-489-7,6/16/2022,Direct Connection,Direct Connection
+L05-489-7,9/6/2022,Direct Connection,Direct Connection
+L05-503-1,6/22/2022,Direct Connection,Direct Connection
+L05-503-1,9/6/2022,Direct Connection,Direct Connection
+LC01-11446-1,7/5/2022,Direct Connection,Partial - Significant Distance
+LC01-11446-1,9/7/2022,Partial - Significant Distance,Partial - Significant Distance
+LC01-11480-1,NA,NA,Undetermined
+LC02-11508-2,7/5/2022,Direct Connection,Direct Connection
+LC02-11508-2,8/16/2022,Undetermined,Direct Connection
+LC02-11508-3,7/5/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+LC02-11508-3,8/16/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+LC03-11515-1,7/5/2022,Direct Connection,Partial - Significant Distance
+LC03-11515-1,9/1/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+LC04-11199-1,NA,NA,Undetermined
+LC05-11017-1,7/5/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+LC05-11017-1,8/29/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+LC05-11017-2,NA,NA,Undetermined
+LC06-11019-1,6/21/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+LC06-11019-1,8/16/2022,Direct Connection,Partial - Significant Distance
+LC06-11509-2,6/21/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+LC06-11509-2,7/5/2022,Partial - Significant Distance,Partial - Significant Distance
+LC06-11509-2,8/16/2022,Direct Connection,Direct Connection
+M00.1-070-4,NA,NA,Undetermined
+M00.1-070-6,NA,NA,Undetermined
+M00.1-071-2 (M00S04),7/19/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+M00.1-071-2 (M00S04),8/30/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+M00.1-071-3 (M00S04),7/19/2022,Direct Connection,Direct Connection
+M00.1-071-3 (M00S04),8/30/2022,Direct Connection,Direct Connection
+M00.2-066-1 (M00S07),7/19/2022,Partial - Significant Distance,Partial - Significant Distance
+M00.2-066-1 (M00S07),8/8/2022,Partial - Significant Distance,Partial - Significant Distance
+M01-002-1,NA,NA,Undetermined
+M01-003-1,NA,NA,Undetermined
+M01-003-2,NA,NA,Undetermined
+M01-008-1,7/26/2022,Direct Connection,Direct Connection
+M01-008-1,9/15/2022,Direct Connection,Direct Connection
+M01-038-3,7/26/2022,Direct Connection,Direct Connection
+M01-038-3,9/15/2022,Direct Connection,Direct Connection
+M01-038-6,7/26/2022,Direct Connection,Direct Connection
+M01-038-6,9/15/2022,Direct Connection,Direct Connection
+M01-042-1 (M01S01),6/30/2022,Partial - Significant Distance,Partial - Significant Distance
+M01-042-1 (M01S01),9/8/2022,Partial - Significant Distance,Partial - Significant Distance
+M01-047-1,6/30/2022,Direct Connection,Direct Connection
+M01-047-1,9/8/2022,Direct Connection,Direct Connection
+M01-050-4 (M01@CGV),7/26/2022,Direct Connection,Direct Connection
+M01-050-4 (M01@CGV),9/15/2022,Direct Connection,Direct Connection
+M01-050-4 (M01@CGV),9/15/2022,Direct Connection,Direct Connection
+M01-050-7,7/26/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+M01-050-7,9/15/2022,Direct Connection,Partial - Significant Distance
+M01-060-3,7/20/2022,Partial - Significant Distance,Direct Connection
+M01-060-3,9/28/2022,Direct Connection,Direct Connection
+M01-099-1,7/26/2022,Direct Connection,Direct Connection
+M01-099-1,9/15/2022,Direct Connection,Direct Connection
+M01-124-2,7/26/2022,Direct Connection,Direct Connection
+M01-124-2,9/15/2022,Direct Connection,Direct Connection
+M01-124-4,7/26/2022,Direct Connection,Partial - Significant Distance
+M01-124-4,9/15/2022,Partial - Significant Distance,Partial - Significant Distance
+M01-168-1d (M00P03),NA,NA,Undetermined
+M01-168-2d (M00P03),NA,NA,Undetermined
+M02-013-1,7/26/2022,Undetermined,Undetermined
+M02-013-1,8/30/2022,Undetermined,Undetermined
+M02-013-1,9/15/2022,Undetermined,Undetermined
+M02-015-1,7/20/2022,Undetermined,None - Flow Infiltrates or Outfall is Dry
+M02-015-1,8/24/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+M02-028-2 (M02P08),7/26/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+M02-028-2 (M02P08),8/30/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+M02-032-1,6/30/2022,Direct Connection,Direct Connection
+M02-032-1,9/8/2022,Direct Connection,Direct Connection
+M02-052-2,7/28/2022,Direct Connection,Direct Connection
+M02-052-2,9/8/2022,Direct Connection,Direct Connection
+M02-052-3,9/8/2022,Direct Connection,Direct Connection
+M02-052-3,9/8/2022,Direct Connection,Direct Connection
+M02-052-3,7/28/2022,NA,Undetermined
+M02-052-4,7/28/2022,Direct Connection,Direct Connection
+M02-052-4,9/8/2022,Direct Connection,Direct Connection
+M02-052-4,9/8/2022,Direct Connection,Direct Connection
+M02-052-4,9/8/2022,Direct Connection,Direct Connection
+M02-052-4,9/8/2022,Direct Connection,Direct Connection
+M02-061-4 (SCBS@M02),7/20/2022,Direct Connection,Direct Connection
+M02-061-4 (SCBS@M02),8/24/2022,Direct Connection,Direct Connection
+M02-061-5,7/20/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+M02-061-5,8/24/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+M02-061-6,7/20/2022,Direct Connection,Direct Connection
+M02-061-6,8/24/2022,Direct Connection,Direct Connection
+M02-061-7,7/20/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+M02-085-1 (M02P06),6/30/2022,Direct Connection,Direct Connection
+M02-085-1 (M02P06),9/8/2022,Direct Connection,Direct Connection
+M02-085-2,6/30/2022,Direct Connection,Direct Connection
+M02-085-2,9/8/2022,Direct Connection,Direct Connection
+M02-086-1,7/26/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+M02-086-1,8/30/2022,NA,None - Flow Infiltrates or Outfall is Dry
+M02-102-1,7/20/2022,Partial - Significant Distance,Partial - Significant Distance
+M02-102-1,9/23/2022,Partial - Significant Distance,Partial - Significant Distance
+M02-142-1,7/20/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+M02-142-1,8/24/2022,NA,None - Flow Infiltrates or Outfall is Dry
+SC01-077-1,NA,NA,Undetermined
+SC01-077-2,NA,NA,Undetermined
+SC02-072-1,7/19/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+SC02-072-1,8/30/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+SC02-072-4,NA,NA,Undetermined
+SC03-067-1,7/19/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+SC03-067-1,8/30/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+SC05-073-1,7/19/2022,Direct Connection,Direct Connection
+SC05-073-3,7/19/2022,Partial - Significant Distance,Direct Connection
+SC05-073-3,8/8/2022,Direct Connection,Direct Connection
+SC06-146-1 (M00P02),7/19/2022,Partial - Significant Distance,Direct Connection
+SC06-146-1 (M00P02),8/8/2022,Direct Connection,Direct Connection
+SC06-146-2 (M00P02),7/19/2022,Direct Connection,Direct Connection
+SC06-146-2 (M00P02),8/8/2022,Direct Connection,Direct Connection
+SC07-079-4,7/20/2022,Direct Connection,Direct Connection
+SC07-079-4,9/23/2022,Direct Connection,Direct Connection
+SC07-079-5,7/20/2022,Partial - Significant Distance,Partial - Significant Distance
+SC07-079-5,9/23/2022,Direct Connection,Partial - Significant Distance
+SC09-081-2d,NA,NA,Undetermined
+SC10-075-1 (M00P05),7/12/2022,Partial - Significant Distance,Partial - Significant Distance
+SC10-075-1 (M00P05),9/23/2022,Direct Connection,Partial - Significant Distance
+SC10-075-3 (M00S01),NA,NA,Undetermined
+SC11-026-1 (M00P01),7/12/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+SC11-026-1 (M00P01),9/23/2022,Partial - Significant Distance,Partial - Significant Distance
+SC11-035-1d,7/12/2022,NA,Undetermined
+SC11-035-1d,9/23/2022,NA,Undetermined
+SC11-035-2d,7/12/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+SC11-035-2d,9/23/2022,Partial - Significant Distance,Partial - Significant Distance
+SC11-035-3d,7/12/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+SC11-035-3d,9/23/2022,None - Flow Infiltrates or Outfall is Dry,None - Flow Infiltrates or Outfall is Dry
+SC11-130-2,9/23/2022,Partial - Significant Distance,Partial - Significant Distance
+SC11-130-2,7/12/2022,NA,Partial - Significant Distance
+SC12-068-2,7/19/2022,Partial - Significant Distance,Partial - Significant Distance
+SC12-068-2,9/23/2022,Partial - Significant Distance,Partial - Significant Distance
+SC12-068-4,7/19/2022,Partial - Significant Distance,Partial - Significant Distance
+SC12-068-4,8/8/2022,None - Flow Infiltrates or Outfall is Dry,Partial - Significant Distance
+SM01-086-1 (M03P01),7/26/2022,Undetermined,Undetermined
+SM01-086-1 (M03P01),9/15/2022,Undetermined,Undetermined
+SM01-086-2,7/26/2022,Undetermined,Undetermined
+SM01-086-2,9/15/2022,Undetermined,Undetermined

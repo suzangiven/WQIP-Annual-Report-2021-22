@@ -16,7 +16,7 @@ library(hms)
 #library(psyche)
 
 # Install latest version:
-install.packages("arcgisbinding", repos="https://r.esri.com", type="win.binary")
+##install.packages("arcgisbinding", repos="https://r.esri.com", type="win.binary")
 
 library(arcgisbinding)
 arc.check_product()

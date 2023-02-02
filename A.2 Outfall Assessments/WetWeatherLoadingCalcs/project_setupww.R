@@ -22,8 +22,8 @@ arc.check_product()
 values <- list()
 values[['AnalysisRunDate']]   <- Sys.Date()
 values[['AnalysisStartDate']] <- as.Date('07/01/2004', format = c('%m/%d/%Y'))
-values[['ReportStart']]       <- '2020-10-01'
-values[['ReportEnd']]         <- '2021-09-30'
+values[['ReportStart']]       <- '2021-10-01'
+values[['ReportEnd']]         <- '2022-09-30'
 
 
 
